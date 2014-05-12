@@ -1,4 +1,0 @@
-EndlessRunner
-=============
-
-Endlessrunner Mediacollege
