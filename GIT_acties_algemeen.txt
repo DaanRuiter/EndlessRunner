@@ -1,0 +1,47 @@
+Als je een project 'onder versiebeheer' wilt plaatsen (zoals dat heet) :
+
+- Open je Bash/terminal (start->programma's->GIT->Bash)
+- navigeer naar je map door het commando cd te gebruiken. Bijvoorbeeld: cd C:\Documents and Settings\Berend\Mijn documenten\missilecommand
+- je zit nu in je folder. Gebruik het volgende commando om het project toe te voegen aan GIT: git init
+
+Nu kun je snapshots maken van je code.
+
+Als je een snapshot wilt maken:
+- navigeer naar je map door het commando cd te gebruiken
+- typ git status om te kijken welke files er verandert of nieuw zijn
+- typ git add -A om alle gewijzigde en nieuwe bestanden klaar te zetten voor een commit
+- typ git commit -m "versie 1 van mijn project"
+- je mag zelf het bericht bepalen. Als je ooit een snapshot terug wilt halen dan zijn deze berichten erg handig. Zorg ervoor dat je bericht duidelijk is + aangeeft wat er nieuw is aan je project.
+
+Je hebt nu een snapshot lokaal gemaakt. Snapshots zijn een soort van 'backups' van je werk. Je hebt een 'versie' vastgelegd en je kunt altijd terug naar deze snapshot.
+
+Als je ook je project wilt 'pushen' naar een externe repository:
+Voer onderstaande handelingen per project eenmaal uit:
+- maak een repository aan op github.com en kopieer de link van de nieuwe repository
+- navigeer met je bash/terminal naar je projectfolder
+- typ git remote add origin https://jouw_link_naar_de_repository
+
+Je project is nu gekoppeld aan een repository. Je kunt nu je project naar een externe opslag sturen. Zo heb je ook op een andere plek versies van je project staan.
+
+Om daadwerkelijk je code naar de repository te pushen:
+- De eerste keer dat je dit voor een project doet gebruik je: git push -u origin master
+- alle volgende keren is het voldoende om alleen het commando git push te gebruiken (zonder -u origin master)
+
+
+Samenwerken aan een Git repository:
+
+Ga in je browser naar de repository op GITHub waar je aan wilt samenwerken, bijvoorbeeld: https://github.com/BerendWeij/voorbeeldles
+
+Rechtsonderin zie je een menu-tje met als titel 'https clone URL'
+- kopieer de link die je hier ziet staan
+- Open je Bash/terminal (start->programma's->GIT->Bash)
+- navigeer naar je map waar je de code wilt hebben door het commando cd te gebruiken. Bijvoorbeeld: cd C:\Documents and Settings\Berend\Mijn documenten\voorbeeldles
+- typ git clone plak_de_link_die_je_hebt_gekopieerd (bijvoorbeeld git clone https://github.com/macollegegamedevelopment/GAP_2_1_OOP_basics.git)
+
+Je hebt nu de code van het project binnen gehaald.
+
+Als je ook code wilt 'pushen' (toevoegen of vervangen bij GitHub) dan moet degene die de repository heeft aangemaakt bij GitHub je aanmelden als collaborator. Dit kan door naar je repository te gaan op GitHub.com, vervolgens ga je naar settings (staat in menu rechts) en daarna ga je naar 'collaborators' (staat in menu links).
+
+Om je code daarna te kunnen pushen: zie de mail van vorige week.
+
+Daarmee heb je de basis van GIT te pakken.

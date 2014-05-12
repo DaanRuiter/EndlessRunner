@@ -1,0 +1,4 @@
+Om GIT goed te kunnen gebruiken met Unity:
+1) Zet de External optie aan in Unity → Preferences → Packages → Repository.
+2) Zet Visible Meta Files aan in Edit → Project Settings → Editor → Version Control Mode.
+3) Zet Force Text aan in Edit → Project Settings → Editor → Asset Serialization Mode.
