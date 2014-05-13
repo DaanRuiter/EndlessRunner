@@ -5,6 +5,7 @@ public class EnemyController : EnemyStats {
 
 	public GameObject bullet;
 	public Transform bulletSpawnPoint;
+	public GameObject healthBar;
 
 	protected bool alive;
 	protected Vector2 pos;
@@ -52,6 +53,8 @@ public class EnemyController : EnemyStats {
 	}
 	public void LoseHealth(float dmg){
 		health -= dmg;
+		healthBar.GetComponent<Healthbar>().UpdateBar(dmg, MAX_HEALTH);
+
 		if(health <= 0)
 		{
 			Destroy(this.gameObject);

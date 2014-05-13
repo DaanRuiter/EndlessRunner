@@ -197,6 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 100000, guid: 8d974cbc2ae35d84f91a5a6062814e0e, type: 2}
   bulletSpawnPoint: {fileID: 400002}
+  healthBar: {fileID: 100000, guid: b320175c07eb27a41a711b52017db003, type: 2}
   movementSpeed: 3
   canShoot: 1
   shootCooldown: .200000003
