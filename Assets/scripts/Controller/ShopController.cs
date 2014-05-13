@@ -6,7 +6,7 @@ public class ShopController : MonoBehaviour {
 	private bool backInvokeAble 	= true;
 	private bool startInvokeAble 	= true;
 	private bool activeState		= true;
-	private float movementSpeed 	= 3f;
+	private float movementSpeed 	= 3.1f;
 	private float beginPoint;
 	private float WeaponAmmount 	= 3f;
 	private string[] gunSort 		= new string[3];
