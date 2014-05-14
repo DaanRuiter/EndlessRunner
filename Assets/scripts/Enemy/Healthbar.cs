@@ -31,6 +31,12 @@ public class Healthbar : MonoBehaviour {
 		newSize.y = this.transform.localScale.y;
 		newSize.z = this.transform.localScale.z;
 		this.transform.localScale = newSize;
+		if(this.transform.lossyScale.x < (MAX_WIDTH / 3) * 2 ){
+			this.renderer.material.color = Color.yellow;
+		}
+		if(this.transform.lossyScale.x < (MAX_WIDTH / 3) * 1 ){
+			this.renderer.material.color = Color.red;
+		}
 	}
 }
 //120 / 100

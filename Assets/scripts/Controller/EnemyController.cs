@@ -5,11 +5,13 @@ public class EnemyController : EnemyStats {
 
 	public GameObject bullet;
 	public Transform bulletSpawnPoint;
-	public GameObject healthBar;
+	public GameObject HPBarPrefab;
 
 	protected bool alive;
 	protected Vector2 pos;
 	protected GameObject player;
+	protected GameObject healthBar;
+	protected Vector3 barPos;
 
 	public float movementSpeed;
 	public bool canShoot;
@@ -25,12 +27,23 @@ public class EnemyController : EnemyStats {
 		alive = true;
 		pos = new Vector2(this.transform.position.x, this.transform.position.y);
 		player = GameObject.FindGameObjectWithTag("Player");
+
+		barPos.x = this.transform.position.x;
+		barPos.y = this.transform.position.y + 1f;
+		barPos.z = -0.2f;
+
+		healthBar = Instantiate(HPBarPrefab, barPos, Quaternion.identity) as GameObject;
 	}
 	
 	protected virtual void Update () {
 		Vector3 dir = player.transform.position - this.transform.position;
 		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+		barPos.x = this.transform.position.x;
+		barPos.y = this.transform.position.y + 1f;
+
+		healthBar.transform.position = barPos;
 
 		if(canShoot){
 			shootTimer -= shootCooldown;
@@ -39,7 +52,7 @@ public class EnemyController : EnemyStats {
 			}
 		}
 		if(DC.isOutOfBounds(this.gameObject)){
-			Destroy(this.gameObject, 1f);
+			DestroyMe(1);
 		}
 	}
 
@@ -53,11 +66,21 @@ public class EnemyController : EnemyStats {
 	}
 	public void LoseHealth(float dmg){
 		health -= dmg;
-		healthBar.GetComponent<Healthbar>().UpdateBar(dmg, MAX_HEALTH);
+		healthBar.GetComponent<Healthbar>().UpdateBar(dmg, health);
 
 		if(health <= 0)
 		{
-			Destroy(this.gameObject);
+			DestroyMe();
 		}
+	}
+
+	public void DestroyMe(){
+		Destroy(this.gameObject);
+		Destroy(healthBar.gameObject);
+	}
+
+	public void DestroyMe(float time){
+		Destroy(this.gameObject, time);
+		Destroy(healthBar.gameObject, time);
 	}
 }
