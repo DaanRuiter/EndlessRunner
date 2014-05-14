@@ -20,12 +20,6 @@ public class Healthbar : MonoBehaviour {
 		float pTH = 100 - pD;
 		float nW = pW * pTH;
 
-		Debug.Log (pH);
-		Debug.Log (pD);
-		Debug.Log (pW);
-		Debug.Log (pTH);
-		Debug.Log (nW);
-
 		Vector3 newSize;
 		newSize.x = nW;
 		newSize.y = this.transform.localScale.y;
@@ -39,17 +33,3 @@ public class Healthbar : MonoBehaviour {
 		}
 	}
 }
-//120 / 100
-	//35 / 1,2
-		//2,6 / 100
-		//2,6 / 100
-		//0,026 * 70
-
-/*
- * 120 / 100 = 1,2 //1 percent health = 1,2 units
- * 35 / 1,2 = 29 //29 dmg is er gedaan.
- * 2,6 / 100 = 0.026 //1 percent van de bar is 0.026 units
- * 100 - 29 = 70 //70 percent total health
- * 0.026 * 70 = 1,82 //nieuwe width
- * */
-

@@ -8,6 +8,7 @@ public class EnemyController : EnemyStats {
 	public GameObject HPBarPrefab;
 
 	protected bool alive;
+	protected bool inRange;
 	protected Vector2 pos;
 	protected GameObject player;
 	protected GameObject healthBar;
@@ -45,7 +46,7 @@ public class EnemyController : EnemyStats {
 
 		healthBar.transform.position = barPos;
 
-		if(canShoot){
+		if(canShoot && inRange){
 			shootTimer -= shootCooldown;
 			if(shootTimer <= 0){
 				Shoot();
@@ -64,6 +65,7 @@ public class EnemyController : EnemyStats {
 	public float getMovementSpeed(){
 		return movementSpeed;
 	}
+
 	public void LoseHealth(float dmg){
 		health -= dmg;
 		healthBar.GetComponent<Healthbar>().UpdateBar(dmg, health);
@@ -72,6 +74,10 @@ public class EnemyController : EnemyStats {
 		{
 			DestroyMe();
 		}
+	}
+
+	public void setRangeState(bool state){
+		inRange = state;
 	}
 
 	public void DestroyMe(){
