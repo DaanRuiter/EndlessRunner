@@ -8,6 +8,7 @@ public class EnemyController : EnemyStats {
 	public GameObject HPBarPrefab;
 
 	protected bool alive;
+	protected bool inRange;
 	protected Vector2 pos;
 	protected GameObject player;
 	protected GameObject healthBar;
@@ -47,6 +48,7 @@ public class EnemyController : EnemyStats {
 
 			healthBar.transform.position = barPos;
 
+<<<<<<< HEAD
 			if(canShoot){
 				shootTimer -= shootCooldown;
 				if(shootTimer <= 0){
@@ -55,6 +57,12 @@ public class EnemyController : EnemyStats {
 			}
 			if(DC.isOutOfBounds(this.gameObject)){
 				DestroyMe(1);
+=======
+		if(canShoot && inRange){
+			shootTimer -= shootCooldown;
+			if(shootTimer <= 0){
+				Shoot();
+>>>>>>> 3372fef7a6b9bd3768fbbcf9d81eec1b6e6bf257
 			}
 		}
 	}
@@ -67,6 +75,7 @@ public class EnemyController : EnemyStats {
 	public float getMovementSpeed(){
 		return movementSpeed;
 	}
+
 	public void LoseHealth(float dmg){
 		health -= dmg;
 		healthBar.GetComponent<Healthbar>().UpdateBar(dmg, health);
@@ -75,6 +84,10 @@ public class EnemyController : EnemyStats {
 		{
 			DestroyMe();
 		}
+	}
+
+	public void setRangeState(bool state){
+		inRange = state;
 	}
 
 	public void DestroyMe(){
