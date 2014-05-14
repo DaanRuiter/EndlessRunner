@@ -19,10 +19,13 @@ public class EnemySpawner : MonoBehaviour {
 	}
 
 	private void Update () {
-		spawnTimer -= 0.1f;
+		if(!DC.paused){
+			Debug.Log ("LOLOLOL");
+			spawnTimer -= 0.1f;
 
-		if(enemySpawnable && spawnTimer <= 0){
-			SpawnEnemy("moving");
+			if(enemySpawnable && spawnTimer <= 0){
+				SpawnEnemy("moving");
+			}
 		}
 	}
 

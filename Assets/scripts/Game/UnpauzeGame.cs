@@ -12,9 +12,9 @@ public class UnpauzeGame : MonoBehaviour {
 	{
 		while (true)
 		{
-			if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 0)
+			if (Input.GetKeyDown(KeyCode.Escape) && DC.paused)
 			{
-				Time.timeScale = 1;
+				DC.paused = false;
 				shop = GameObject.FindGameObjectWithTag ("ShopInterface");
 				if(shop != null)
 				{

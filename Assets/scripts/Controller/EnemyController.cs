@@ -36,23 +36,26 @@ public class EnemyController : EnemyStats {
 	}
 	
 	protected virtual void Update () {
-		Vector3 dir = player.transform.position - this.transform.position;
-		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+		if(DC.paused != true)
+		{
+			Vector3 dir = player.transform.position - this.transform.position;
+			float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+			transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-		barPos.x = this.transform.position.x;
-		barPos.y = this.transform.position.y + 1f;
+			barPos.x = this.transform.position.x;
+			barPos.y = this.transform.position.y + 1f;
 
-		healthBar.transform.position = barPos;
+			healthBar.transform.position = barPos;
 
-		if(canShoot){
-			shootTimer -= shootCooldown;
-			if(shootTimer <= 0){
-				Shoot();
+			if(canShoot){
+				shootTimer -= shootCooldown;
+				if(shootTimer <= 0){
+					Shoot();
+				}
 			}
-		}
-		if(DC.isOutOfBounds(this.gameObject)){
-			DestroyMe(1);
+			if(DC.isOutOfBounds(this.gameObject)){
+				DestroyMe(1);
+			}
 		}
 	}
 

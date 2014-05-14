@@ -20,12 +20,6 @@ public class Healthbar : MonoBehaviour {
 		float pTH = 100 - pD;
 		float nW = pW * pTH;
 
-		Debug.Log (pH);
-		Debug.Log (pD);
-		Debug.Log (pW);
-		Debug.Log (pTH);
-		Debug.Log (nW);
-
 		Vector3 newSize;
 		newSize.x = nW;
 		newSize.y = this.transform.localScale.y;

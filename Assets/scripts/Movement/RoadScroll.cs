@@ -16,14 +16,17 @@ public class RoadScroll : MonoBehaviour {
 	}
 	
 	void Update () {
-		foreach(GameObject road in roads){
-			Vector2 pos = road.transform.position;
-			pos.y -= scrollSpeed;
-			road.transform.position = pos;
-			if(road.transform.position.y < Camera.main.camera.transform.position.y - ROADHEIGHT){
-				pos.y = road.transform.position.y + ROADHEIGHT * roads.Length;
+		if(DC.paused != true)
+		{
+			foreach(GameObject road in roads){
+				Vector2 pos = road.transform.position;
+				pos.y -= scrollSpeed;
 				road.transform.position = pos;
-				DC.setRandomTexture(road, DC.getTextureList(DC.roadTextures));
+				if(road.transform.position.y < Camera.main.camera.transform.position.y - ROADHEIGHT){
+					pos.y = road.transform.position.y + ROADHEIGHT * roads.Length;
+					road.transform.position = pos;
+					DC.setRandomTexture(road, DC.getTextureList(DC.roadTextures));
+				}
 			}
 		}
 	}

@@ -8,13 +8,16 @@ public class ShootGun : MonoBehaviour {
 	
 	void Update () 
 	{
-		if (Input.GetMouseButton (0) && shootAble) 
+		if(DC.paused != true)
 		{
-			float shootSpeed 	=  1 - (0.01f*(float)this.GetComponent<GunSort>().speed);
-			float dmg 			= this.GetComponent<GunSort>().dmg;
-			float bulletSpeed 	= this.GetComponent<GunSort>().bulletSpeed;
-			bool piercing	    = this.GetComponent<GunSort>().piercing;
-			ShootBullet(/*bullet,*/ shootSpeed, dmg, bulletSpeed,piercing);
+			if (Input.GetMouseButton (0) && shootAble) 
+			{
+				float shootSpeed 	=  1 - (0.01f*(float)this.GetComponent<GunSort>().speed);
+				float dmg 			= this.GetComponent<GunSort>().dmg;
+				float bulletSpeed 	= this.GetComponent<GunSort>().bulletSpeed;
+				bool piercing	    = this.GetComponent<GunSort>().piercing;
+				ShootBullet(/*bullet,*/ shootSpeed, dmg, bulletSpeed,piercing);
+			}
 		}
 	}
 	private void ShootBullet(/*Texture _bullet,*/ float _shootSpeed, float _dmg, float _speed,bool _piercing)
