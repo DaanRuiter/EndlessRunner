@@ -47,9 +47,7 @@ public class EnemyController : EnemyStats {
 			barPos.y = this.transform.position.y + 1f;
 
 			healthBar.transform.position = barPos;
-
-<<<<<<< HEAD
-			if(canShoot){
+			if(canShoot && inRange){
 				shootTimer -= shootCooldown;
 				if(shootTimer <= 0){
 					Shoot();
@@ -57,12 +55,6 @@ public class EnemyController : EnemyStats {
 			}
 			if(DC.isOutOfBounds(this.gameObject)){
 				DestroyMe(1);
-=======
-		if(canShoot && inRange){
-			shootTimer -= shootCooldown;
-			if(shootTimer <= 0){
-				Shoot();
->>>>>>> 3372fef7a6b9bd3768fbbcf9d81eec1b6e6bf257
 			}
 		}
 	}
@@ -76,13 +68,13 @@ public class EnemyController : EnemyStats {
 		return movementSpeed;
 	}
 
-	public void LoseHealth(float dmg){
-		health -= dmg;
-		healthBar.GetComponent<Healthbar>().UpdateBar(dmg, health);
-
+	public void LoseHealth(float _dmg){
+		health -= _dmg;
+		healthBar.GetComponent<Healthbar>().UpdateBar(_dmg, health);
 		if(health <= 0)
 		{
 			DestroyMe();
+			GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats>().AddGold(gold);
 		}
 	}
 
@@ -95,8 +87,8 @@ public class EnemyController : EnemyStats {
 		Destroy(healthBar.gameObject);
 	}
 
-	public void DestroyMe(float time){
-		Destroy(this.gameObject, time);
-		Destroy(healthBar.gameObject, time);
+	public void DestroyMe(float _time){
+		Destroy(this.gameObject, _time);
+		Destroy(healthBar.gameObject, _time);
 	}
 }

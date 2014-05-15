@@ -10,11 +10,7 @@ public class GunSort : MonoBehaviour {
 
 	void Start () 
 	{
-		weaponSort 		= "Default";
-		speed      		= 30;
-		dmg        		= 35;
-		bulletSpeed 	= 20;
-		piercing 		= false;
+		ResetGun ();
 	}
 	public void SetGunStats(string _weaponSort, int _speed, int _dmg, int _bulletSpeed, bool _piercing)
 	{
@@ -24,5 +20,13 @@ public class GunSort : MonoBehaviour {
 		bulletSpeed 	= _bulletSpeed;
 		piercing		= _piercing;
 		//SetTexture ();
+	}
+	public void ResetGun()
+	{
+		weaponSort 		= "Default";
+		speed      		= 30;
+		dmg        		= 35;
+		bulletSpeed 	= 20;
+		piercing 		= false;
 	}
 }

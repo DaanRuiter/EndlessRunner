@@ -5,13 +5,25 @@ public class GameController : MonoBehaviour{
 
 	public static ArrayList enemies = new ArrayList();
 
-	void Update(){
-		foreach(GameObject enemy in enemies){
-			if(enemy.transform.position.y < 0){
-				Destroy(enemy.gameObject, 1f);
-			}
+	public void ResetStage()
+	{
+		GameObject.FindGameObjectWithTag ("PlayerController").GetComponent<PlayerStats>().LoseLive();
+		GameObject.FindGameObjectWithTag ("PlayerController").GetComponent<PlayerController>().ResetPos ();
+		GameObject.FindGameObjectWithTag ("Gun").GetComponent<GunSort>().ResetGun();
+		GameObject.FindGameObjectWithTag ("Shop").GetComponent<ShopController> ().Reset ();
+		GameObject.FindGameObjectWithTag ("BlackScreen").GetComponent<FadeScreen> ().StartFade ();
+		GameObject[] enemys = GameObject.FindGameObjectsWithTag ("Enemy");
+		GameObject[] bullets = GameObject.FindGameObjectsWithTag ("Bullet");
+		GameObject[] healthbars = GameObject.FindGameObjectsWithTag ("HealthBar");
+		foreach (Object bullet in bullets) {
+			Destroy (bullet);
+		}
+		foreach(Object enemy in enemys) {
+			Destroy (enemy);
+		}
+		foreach(Object healthbar in healthbars) {
+			Destroy (healthbar);
 		}
 	}
-
 }
 

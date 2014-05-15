@@ -109,4 +109,11 @@ public class ShopController : MonoBehaviour {
 			GameObject.Find("Weapon-" + (i+1)).GetComponent<ShopSlot>().SetGunStats(gunSort[i],gunPrice[i],gunSpeed[i],gunDmg[i],gunBulletSpeed[i],gunPiercing[i]);
 		}
 	}
+	public void Reset()
+	{
+		Vector2 position = this.transform.position;
+		position.y = beginPoint;
+		this.transform.position = position;
+		inToStage = false;
+	}
 }

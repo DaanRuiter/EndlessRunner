@@ -16,4 +16,9 @@ public class PlayerController : MonoBehaviour {
 			controller.Move(moveDirection * Time.deltaTime);
 		}
 	}
+	public void ResetPos()
+	{
+		Vector2 oldPos = new Vector2(0,0);
+		this.transform.position = oldPos;
+	}
 }
