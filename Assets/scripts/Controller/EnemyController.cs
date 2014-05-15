@@ -13,10 +13,8 @@ public class EnemyController : EnemyStats {
 	protected GameObject player;
 	protected GameObject healthBar;
 	protected Vector3 barPos;
-
-	public float movementSpeed;
+	
 	public bool canShoot;
-	public float shootCooldown;
 	public string type;
 	//types (no caps):
 	//moving
@@ -34,6 +32,9 @@ public class EnemyController : EnemyStats {
 		barPos.z = - 0.2f;
 
 		healthBar = Instantiate(HPBarPrefab, barPos, Quaternion.identity) as GameObject;
+		health += 10f * (PlayerStats.level-1);
+		speed += 0.5f * (PlayerStats.level-1); 
+		shootCooldown -= 0.01f * (PlayerStats.level-1);
 	}
 	
 	protected virtual void Update () {
@@ -64,26 +65,15 @@ public class EnemyController : EnemyStats {
 		shootTimer = Random.Range(10, 14);
 	}
 
-	public float getMovementSpeed(){
-		return movementSpeed;
-	}
-
-<<<<<<< HEAD
-	public void LoseHealth(float _dmg){
+	public void LoseHealth(float _dmg, bool _crit){
 		health -= _dmg;
-		healthBar.GetComponent<Healthbar>().UpdateBar(_dmg, health);
-=======
-	public void LoseHealth(float dmg){
-		health -= dmg;
-
->>>>>>> 4c03d8ad44d529170bd6cd1e4e953935ac45a878
+		healthBar.GetComponent<Healthbar> ().UpdateBar (_dmg, health);
 		if(health <= 0)
 		{
 			DestroyMe();
 			GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats>().AddGold(gold);
+			GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats>().AddExp(exp);
 		}
-
-		healthBar.GetComponent<Healthbar>().UpdateBar(dmg, health);
 	}
 
 	public void setRangeState(bool state){

@@ -106,7 +106,7 @@ public class ShopController : MonoBehaviour {
 	{
 		for(int i = 0; i < WeaponAmmount; i++)
 		{
-			GameObject.Find("Weapon-" + (i+1)).GetComponent<ShopSlot>().SetGunStats(gunSort[i],gunPrice[i],gunSpeed[i],gunDmg[i],gunBulletSpeed[i],gunPiercing[i]);
+			GameObject.Find("Weapon-"+(i+1)).GetComponent<ShopSlot>().SetGunStats(gunSort[i],gunPrice[i],gunSpeed[i],gunDmg[i],gunBulletSpeed[i],gunPiercing[i]);
 		}
 	}
 	public void Reset()

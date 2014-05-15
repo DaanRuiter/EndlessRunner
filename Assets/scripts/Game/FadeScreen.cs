@@ -6,8 +6,7 @@ public class FadeScreen : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		color.a = 0;
-		this.renderer.material.color = color;
+		StartFade ();
 	}
 	public void StartFade()
 	{
