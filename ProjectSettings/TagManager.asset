@@ -7,12 +7,12 @@ TagManager:
   - ShopInterface
   - PlayerController
   - Gun
-  - 
+  - Bullet
   - Enemy
-  - 
+  - HealthBar
   - Road
   - DataCenter
-  - 
+  - BlackScreen
   - EnemyRange
   - 
   Builtin Layer 0: Default

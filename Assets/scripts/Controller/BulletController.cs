@@ -35,7 +35,7 @@ public class BulletController : MonoBehaviour {
 			this.transform.position = pos;
 		}
 	}
-	void OnTriggerEnter2D(Collider2D other)
+	protected virtual void OnTriggerEnter2D(Collider2D other)
 	{
 		if(other.transform.tag == "Enemy")
 		{
