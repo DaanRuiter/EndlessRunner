@@ -856,7 +856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSort: 
   speed: 20
-  dmg: 0
+  dmg: 95
   bulletSpeed: 0
   piercing: 0
 --- !u!114 &1274120835
