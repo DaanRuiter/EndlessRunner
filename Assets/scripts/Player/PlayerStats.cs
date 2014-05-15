@@ -31,11 +31,11 @@ public class PlayerStats : MonoBehaviour {
 	{
 		gold += _gold;
 	}
-<<<<<<< HEAD
 
 	public float GetGold(){
 		return gold;
-=======
+	}
+
 	public void AddExp(float _exp)
 	{
 		exp += _exp;
@@ -45,6 +45,5 @@ public class PlayerStats : MonoBehaviour {
 			level += 1;
 			exp = 0;
 		}
->>>>>>> e348f9af6e5050483b055d9dffeba6b1fdcc7c6c
 	}
 }
