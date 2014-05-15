@@ -24,14 +24,14 @@ public class EnemyController : EnemyStats {
 	private float shootTimer;
 
 	protected void Start () {
-		shootTimer = 10f;
+		shootTimer = 0f;
 		alive = true;
 		pos = new Vector2(this.transform.position.x, this.transform.position.y);
 		player = GameObject.FindGameObjectWithTag("Player");
 
 		barPos.x = this.transform.position.x;
 		barPos.y = this.transform.position.y + 1f;
-		barPos.z = -0.2f;
+		barPos.z = - 0.2f;
 
 		healthBar = Instantiate(HPBarPrefab, barPos, Quaternion.identity) as GameObject;
 	}
@@ -61,21 +61,29 @@ public class EnemyController : EnemyStats {
 
 	private void Shoot(){
 		GameObject newBullet = Instantiate(bullet, bulletSpawnPoint.position, bulletSpawnPoint.rotation) as GameObject;
-		shootTimer = 10f;
+		shootTimer = Random.Range(10, 14);
 	}
 
 	public float getMovementSpeed(){
 		return movementSpeed;
 	}
 
+<<<<<<< HEAD
 	public void LoseHealth(float _dmg){
 		health -= _dmg;
 		healthBar.GetComponent<Healthbar>().UpdateBar(_dmg, health);
+=======
+	public void LoseHealth(float dmg){
+		health -= dmg;
+
+>>>>>>> 4c03d8ad44d529170bd6cd1e4e953935ac45a878
 		if(health <= 0)
 		{
 			DestroyMe();
 			GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats>().AddGold(gold);
 		}
+
+		healthBar.GetComponent<Healthbar>().UpdateBar(dmg, health);
 	}
 
 	public void setRangeState(bool state){
