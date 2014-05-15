@@ -474,7 +474,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1161718912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .3417449, y: 4.01833534, z: -3}
+  m_LocalPosition: {x: .3417449, y: 4.01833534, z: -.200000003}
   m_LocalScale: {x: 50, y: 40, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -956,6 +956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gold: 9999999
   lives: 0
+  exp: 0
 --- !u!1 &1469667264
 GameObject:
   m_ObjectHideFlags: 0

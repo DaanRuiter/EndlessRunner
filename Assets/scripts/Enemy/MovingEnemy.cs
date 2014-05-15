@@ -8,7 +8,7 @@ public class MovingEnemy : EnemyController {
 		{
 			if(alive){
 				pos = transform.position;
-				pos.y -= movementSpeed * Time.deltaTime;
+				pos.y -= speed * Time.deltaTime;
 				transform.position = pos;
 			}
 		}

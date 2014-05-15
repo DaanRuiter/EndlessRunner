@@ -14,7 +14,11 @@ TagManager:
   - DataCenter
   - BlackScreen
   - EnemyRange
+<<<<<<< HEAD
   - EnemyHPText
+=======
+  - ShopSlot
+>>>>>>> e348f9af6e5050483b055d9dffeba6b1fdcc7c6c
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
