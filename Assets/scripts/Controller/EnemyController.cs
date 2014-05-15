@@ -39,8 +39,7 @@ public class EnemyController : EnemyStats {
 	}
 	
 	protected virtual void Update () {
-		if(DC.paused != true)
-		{
+		if(DC.paused != true){
 			Debug.Log (health);
 			Vector3 dir = player.transform.position - this.transform.position;
 			float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -50,10 +49,7 @@ public class EnemyController : EnemyStats {
 			barPos.y = this.transform.position.y + 1f;
 
 			healthBar.transform.position = barPos;
-<<<<<<< HEAD
 
-=======
->>>>>>> 5cc06e0d7251e3d696baf6fca846621befa19238
 			if(canShoot && inRange){
 				shootTimer -= shootCooldown;
 				if(shootTimer <= 0){
@@ -75,22 +71,15 @@ public class EnemyController : EnemyStats {
 		return movementSpeed;
 	}
 
-<<<<<<< HEAD
 	public void LoseHealth(float _dmg){
 		health -= _dmg;
-		healthBar.GetComponent<Healthbar>().UpdateBar(_dmg, health);
-=======
-	public void LoseHealth(float dmg){
-		health -= dmg;
 
->>>>>>> 4c03d8ad44d529170bd6cd1e4e953935ac45a878
-		if(health <= 0)
-		{
+		if(health <= 0)		{
 			DestroyMe();
 			GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats>().AddGold(gold);
 		}
 
-		healthBar.GetComponent<Healthbar>().UpdateBar(dmg, health);
+		healthBar.GetComponent<Healthbar>().UpdateBar(this.health, _dmg);
 	}
 
 	public void setRangeState(bool state){
@@ -100,10 +89,12 @@ public class EnemyController : EnemyStats {
 	public void DestroyMe(){
 		Destroy(this.gameObject);
 		Destroy(healthBar.gameObject);
+		Destroy(healthBar.GetComponent<Healthbar>().GetText());
 	}
 
 	public void DestroyMe(float _time){
 		Destroy(this.gameObject, _time);
 		Destroy(healthBar.gameObject, _time);
+		Destroy(healthBar.GetComponent<Healthbar>().GetText(), _time);
 	}
 }

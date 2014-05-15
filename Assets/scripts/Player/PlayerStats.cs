@@ -24,4 +24,8 @@ public class PlayerStats : MonoBehaviour {
 	public void AddGold(float _gold){
 		gold += _gold;
 	}
+
+	public float GetGold(){
+		return gold;
+	}
 }
