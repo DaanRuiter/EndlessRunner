@@ -20,7 +20,6 @@ public class EnemySpawner : MonoBehaviour {
 
 	private void Update () {
 		if(!DC.paused){
-			Debug.Log ("LOLOLOL");
 			spawnTimer -= 0.1f;
 
 			if(enemySpawnable && spawnTimer <= 0){
@@ -41,7 +40,7 @@ public class EnemySpawner : MonoBehaviour {
 
 	private void SpawnEnemy(string type){
 		if(type.Equals("moving")){
-			spawnTimer = 10;
+			spawnTimer = 1000;
 			spawnPoint.x = getRandomX();
 			spawnPoint.y = getRandomY();
 			GameObject enem = Instantiate(movingEnemy, spawnPoint, Quaternion.identity) as GameObject;

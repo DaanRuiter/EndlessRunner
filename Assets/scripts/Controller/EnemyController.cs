@@ -33,12 +33,15 @@ public class EnemyController : EnemyStats {
 		barPos.y = this.transform.position.y + 1f;
 		barPos.z = - 0.2f;
 
-		healthBar = Instantiate(HPBarPrefab, barPos, Quaternion.identity) as GameObject;
+		healthBar = GameObject.Instantiate(HPBarPrefab, barPos, Quaternion.identity) as GameObject;
+		healthBar.GetComponent<Healthbar>().Init();
+		healthBar.GetComponent<Healthbar>().InitHealthText(this.health);
 	}
 	
 	protected virtual void Update () {
 		if(DC.paused != true)
 		{
+			Debug.Log (health);
 			Vector3 dir = player.transform.position - this.transform.position;
 			float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 			transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -48,25 +51,18 @@ public class EnemyController : EnemyStats {
 
 			healthBar.transform.position = barPos;
 
-<<<<<<< HEAD
-			if(canShoot){
+			if(canShoot && inRange){
 				shootTimer -= shootCooldown;
 				if(shootTimer <= 0){
 					Shoot();
 				}
 			}
+
 			if(DC.isOutOfBounds(this.gameObject)){
 				DestroyMe(1);
-=======
-		if(canShoot && inRange){
-			shootTimer -= shootCooldown;
-			if(shootTimer <= 0){
-				Shoot();
->>>>>>> 3372fef7a6b9bd3768fbbcf9d81eec1b6e6bf257
 			}
 		}
 	}
-
 	private void Shoot(){
 		GameObject newBullet = Instantiate(bullet, bulletSpawnPoint.position, bulletSpawnPoint.rotation) as GameObject;
 		shootTimer = Random.Range(10, 14);
