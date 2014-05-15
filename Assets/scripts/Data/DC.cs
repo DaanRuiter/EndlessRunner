@@ -6,6 +6,7 @@ public class DC : MonoBehaviour {
 	public Texture[] _bulletTextures;
 	public Texture[] _roadTextures;
 
+	public static bool paused;
 	public static Texture[] roadTextures;
 	void Awake(){
 		roadTextures = _roadTextures;

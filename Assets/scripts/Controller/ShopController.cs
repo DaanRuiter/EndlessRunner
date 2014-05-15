@@ -15,6 +15,7 @@ public class ShopController : MonoBehaviour {
 	private int[] gunSpeed 			= new int[3];
 	private int[] gunBulletSpeed 	= new int[3];
 	private bool[] gunPiercing		= new bool[3];
+	private GameObject shop;
 
 	public float endPoint;
 	public GameObject shopInterface;
@@ -25,33 +26,36 @@ public class ShopController : MonoBehaviour {
 	}
 	void Update () 
 	{
-		//als de shop in de stage mag komen.
-		if (inToStage) 
+		if(DC.paused != true)
 		{
-			if(this.transform.position.y <= endPoint)
+			//als de shop in de stage mag komen.
+			if (inToStage) 
 			{
-				this.transform.Translate (new Vector2 (0f, 1f) * movementSpeed * Time.deltaTime);
-			} 
-			else if(startInvokeAble)
-			{
-				activeState = true;
-				startInvokeAble = false;
-				float randomTime = Random.Range (3f, 5f);
-				Invoke("GoOutGame", randomTime);
-				getGun();
+				if(this.transform.position.y <= endPoint)
+				{
+					this.transform.Translate (new Vector2 (0f, 1f) * movementSpeed * Time.deltaTime);
+				} 
+				else if(startInvokeAble)
+				{
+					activeState = true;
+					startInvokeAble = false;
+					float randomTime = Random.Range (3f, 5f);
+					Invoke("GoOutGame", randomTime);
+					getGun();
+				}
 			}
-		}
-		//als de shop niet in de stage mag.
-		else if(this.transform.position.y >= beginPoint)
-		{
-			activeState = false;
-			this.transform.Translate (new Vector2 (0f, -1f) * movementSpeed * Time.deltaTime);
-		} 
-		else if(backInvokeAble)
-		{
-			float randomTime = Random.Range (3f, 10f);
-			Invoke ("GoInGame", randomTime);
-			backInvokeAble = false;
+			//als de shop niet in de stage mag.
+			else if(this.transform.position.y >= beginPoint)
+			{
+				activeState = false;
+				this.transform.Translate (new Vector2 (0f, -1f) * movementSpeed * Time.deltaTime);
+			} 
+			else if(backInvokeAble)
+			{
+				float randomTime = Random.Range (3f, 10f);
+				Invoke ("GoInGame", randomTime);
+				backInvokeAble = false;
+			}
 		}
 	}
 	private void GoInGame()
@@ -68,12 +72,20 @@ public class ShopController : MonoBehaviour {
 	{
 		if(other.transform.tag == "Player")
 		{
-			if(Input.GetKeyDown(KeyCode.E) && activeState)
+			if(Input.GetKeyDown(KeyCode.E) && activeState && !DC.paused)
 			{
-				Time.timeScale = 0;
+				DC.paused = true;
 				Vector2 spawnPos = new Vector2(0,0);
 				Instantiate(shopInterface,spawnPos,this.transform.rotation);
 				SetGun();
+			} else if(Input.GetKeyDown(KeyCode.E) && activeState && DC.paused)
+			{
+				DC.paused = false;
+				shop = GameObject.FindGameObjectWithTag ("ShopInterface");
+				if(shop != null)
+				{
+					Destroy(shop);
+				}
 			}
 		}
 	}

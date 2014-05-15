@@ -27,10 +27,13 @@ public class BulletController : MonoBehaviour {
 	}
 	void Update () 
 	{
-		this.transform.Translate (new Vector2(0,1) * speed * Time.deltaTime);
-		Vector2 pos = this.transform.position;
-		pos.y -= 3f * Time.deltaTime;
-		this.transform.position = pos;
+		if(DC.paused != true)
+		{
+			this.transform.Translate (new Vector2(0,1) * speed * Time.deltaTime);
+			Vector2 pos = this.transform.position;
+			pos.y -= 3f * Time.deltaTime;
+			this.transform.position = pos;
+		}
 	}
 	void OnTriggerEnter2D(Collider2D other)
 	{
