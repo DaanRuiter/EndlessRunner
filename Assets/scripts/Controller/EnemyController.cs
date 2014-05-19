@@ -49,7 +49,10 @@ public class EnemyController : EnemyStats {
 			barPos.y = this.transform.position.y + 1f;
 
 			healthBar.transform.position = barPos;
+<<<<<<< HEAD
 
+=======
+>>>>>>> a00a96cec1e798ced7a46bbb0979af6e7d158950
 			if(canShoot && inRange){
 				shootTimer -= shootCooldown;
 				if(shootTimer <= 0){

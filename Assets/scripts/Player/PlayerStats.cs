@@ -25,7 +25,7 @@ public class PlayerStats : MonoBehaviour {
 	}
 	void Death()
 	{
-		//maak animatie dood + retry!
+		GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ().ResetStage ();
 	}
 	public void AddGold(float _gold)
 	{

@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour {
 	protected float speed;
 	protected float dmg;
 	protected bool piercing;
+	protected int critChance;
 	void Start () 
 	{
 		Destroy(gameObject, destroyTime);
@@ -18,11 +19,12 @@ public class BulletController : MonoBehaviour {
 			Destroy(this.gameObject);
 		}
 	}
-	public void setStats(float _speed, float _dmg, bool _piercing/*, Texture _bullet*/)
+	public void setStats(float _speed, float _dmg, bool _piercing,int _critChance/*, Texture _bullet*/)
 	{
 		speed 	= _speed;
 		dmg 	= _dmg;
 		piercing = _piercing;
+		critChance = _critChance;
 		//this.renderer.material.SetTexture
 	}
 	void Update () 
@@ -39,15 +41,24 @@ public class BulletController : MonoBehaviour {
 	{
 		if(other.transform.tag == "Enemy")
 		{
+<<<<<<< HEAD
+			int criticalStrike = Random.Range(0,101);
+			if(criticalStrike > critChance)
+=======
 			int criticalStrike = Random.Range(0,10);
 			if(criticalStrike == 0)
+>>>>>>> 36866d975c532a57d5a11aa05190734f7d43fd75
 			{
 				float extradmg = Random.Range(0,5);
 				other.gameObject.GetComponent<EnemyController>().LoseHealth(dmg + extradmg, true);
 			} else {
 				float extradmg = Random.Range(10,15);
+<<<<<<< HEAD
+				other.gameObject.GetComponent<EnemyController>().LoseHealth(dmg + extradmg, true);
+=======
 				other.gameObject.GetComponent<EnemyController>().LoseHealth(dmg + extradmg, false);
 
+>>>>>>> 36866d975c532a57d5a11aa05190734f7d43fd75
 			}
 			if(!piercing)
 			{

@@ -10,7 +10,7 @@ public class EnemyBulletController : BulletController
 	}
 	protected override void OnTriggerEnter2D(Collider2D other) {
 		if(other.transform.tag == "Player"){
-			GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().ResetStage();
+			GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats>().LoseLive();
 			Destroy(this.gameObject);
 		}
 	}

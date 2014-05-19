@@ -16,11 +16,12 @@ public class ShootGun : MonoBehaviour {
 				float dmg 			= this.GetComponent<GunSort>().dmg;
 				float bulletSpeed 	= this.GetComponent<GunSort>().bulletSpeed;
 				bool piercing	    = this.GetComponent<GunSort>().piercing;
-				ShootBullet(/*bullet,*/ shootSpeed, dmg, bulletSpeed,piercing);
+				int critChance		= this.GetComponent<GunSort>().critChance;
+				ShootBullet(/*bullet,*/ shootSpeed, dmg, bulletSpeed,piercing,critChance);
 			}
 		}
 	}
-	private void ShootBullet(/*Texture _bullet,*/ float _shootSpeed, float _dmg, float _speed,bool _piercing)
+	private void ShootBullet(/*Texture _bullet,*/ float _shootSpeed, float _dmg, float _speed,bool _piercing,int _critChance)
 	{
 		//audio.Play(); 
 		//audio.pitch = Random.Range (1f, 10f);
@@ -30,7 +31,7 @@ public class ShootGun : MonoBehaviour {
 		if(gunSort != "Shotgun")
 		{
 			var newBullet = Instantiate (bullet, spawnPoint.position, spawnPoint.rotation) as GameObject;
-			newBullet.GetComponent<BulletController> ().setStats (_speed, _dmg,_piercing/*, _bullet*/);
+			newBullet.GetComponent<BulletController> ().setStats (_speed, _dmg,_piercing,_critChance/*, _bullet*/);
 		} else 
 		{
 			float extraRot = -0.1f;
@@ -39,7 +40,7 @@ public class ShootGun : MonoBehaviour {
 				Quaternion spawnPointRot = spawnPoint.rotation;
 				spawnPointRot.z += extraRot;
 				var newBullet = Instantiate (bullet, spawnPoint.position, spawnPointRot) as GameObject;
-				newBullet.GetComponent<BulletController> ().setStats (_speed, _dmg,_piercing/*, _bullet*/);
+				newBullet.GetComponent<BulletController> ().setStats (_speed, _dmg,_piercing,_critChance/*, _bullet*/);
 				extraRot += 0.1f;
 			}
 		}

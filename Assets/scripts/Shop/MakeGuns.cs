@@ -10,6 +10,7 @@ public class MakeGuns : MonoBehaviour {
 		int speedStat		  = Random.Range(60,90);
 		int dmgStat			  = Random.Range(40,60);
 		int bSpeed 			  = 10;
+		int critChance 		  = 0;
 		bool piercing		  = false;
 		ArrayList weaponStats = new ArrayList ();
 
@@ -22,6 +23,7 @@ public class MakeGuns : MonoBehaviour {
 			bSpeed += 10;
 			price = (dmgStat*50*0.5f) + (speedStat*50*0.3f) + 250;
 			piercing = false;
+			critChance = Random.Range(10,21);
 			break;
 		case 2:
 			randomSort = "Shotgun";
@@ -30,6 +32,7 @@ public class MakeGuns : MonoBehaviour {
 			bSpeed += 5;
 			price = (dmgStat*50*0.5f) + (speedStat*50*0.3f) + 250;
 			piercing = false;
+			critChance = Random.Range(20,41);
 			break;
 		case 3:
 			randomSort = "Sniper";
@@ -38,6 +41,7 @@ public class MakeGuns : MonoBehaviour {
 			bSpeed += 20;
 			price = (dmgStat*50*0.5f) + (speedStat*100*0.3f) + 250;
 			piercing = true;
+			critChance = Random.Range(30,61);
 			break;
 		default:
 			break;
@@ -48,6 +52,7 @@ public class MakeGuns : MonoBehaviour {
 		weaponStats.Add (price);
 		weaponStats.Add (bSpeed);
 		weaponStats.Add (piercing);
+		weaponStats.Add (critChance);
 
 		return weaponStats;
 	}
