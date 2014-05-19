@@ -21,27 +21,27 @@ public class MakeGuns : MonoBehaviour {
 			speedStat += 5;
 			dmgStat -= 20;
 			bSpeed += 10;
-			price = (dmgStat*50*0.5f) + (speedStat*50*0.3f) + 250;
 			piercing = false;
 			critChance = Random.Range(10,21);
+			price = (dmgStat*50*0.5f) + (speedStat*50*0.3f) + 250 + critChance*10;
 			break;
 		case 2:
 			randomSort = "Shotgun";
 			speedStat -= 45;
 			dmgStat += 4;
 			bSpeed += 5;
-			price = (dmgStat*50*0.5f) + (speedStat*50*0.3f) + 250;
 			piercing = false;
 			critChance = Random.Range(20,41);
+			price = (dmgStat*50*0.5f) + (speedStat*50*0.3f) + 250 + critChance*10;
 			break;
 		case 3:
 			randomSort = "Sniper";
 			speedStat -= 55;
 			dmgStat += 45;
 			bSpeed += 20;
-			price = (dmgStat*50*0.5f) + (speedStat*100*0.3f) + 250;
 			piercing = true;
 			critChance = Random.Range(30,61);
+			price = (dmgStat*50*0.5f) + (speedStat*100*0.3f) + 250 + critChance*10;
 			break;
 		default:
 			break;

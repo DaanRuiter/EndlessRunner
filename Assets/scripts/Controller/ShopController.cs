@@ -40,7 +40,7 @@ public class ShopController : MonoBehaviour {
 				{
 					activeState = true;
 					startInvokeAble = false;
-					float randomTime = Random.Range (3f, 5f);
+					float randomTime = Random.Range (5f, 10f);
 					Invoke("GoOutGame", randomTime);
 					getGun();
 				}

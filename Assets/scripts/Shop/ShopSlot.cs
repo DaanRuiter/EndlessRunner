@@ -50,6 +50,6 @@ public class ShopSlot : MonoBehaviour {
 	}
 	private void MakeText()
 	{
-		statsText.text = "Stats" + "\n" + "Weapon: " + weaponSort + "\n" + "Damage: " + dmg + "\n" + "Speed: " + speed + "\n" + "Price: " + price + "\n" + "CritChance: " + critChance;
+		statsText.text = "Stats" + "\n" + "Weapon: " + weaponSort + "\n" + "Damage: " + dmg + "\n" + "Speed: " + speed + "\n" + "CritChance: " + critChance + "\n" + "Price: " + price;
 	}
 }

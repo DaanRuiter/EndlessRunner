@@ -42,14 +42,23 @@ public class BulletController : MonoBehaviour {
 		if(other.transform.tag == "Enemy")
 		{
 			int criticalStrike = Random.Range(0,101);
+<<<<<<< HEAD
 			if(criticalStrike > critChance){
+=======
+			if(criticalStrike > critChance)
+			{
+>>>>>>> afabece346e6b3b02d1afaebd65bbd7cb5425dc2
 				float extradmg = Random.Range(0,5);
 				other.gameObject.GetComponent<EnemyController>().LoseHealth(dmg + extradmg, false);
 			} else {
 				float extradmg = Random.Range(10,15);
+<<<<<<< HEAD
 
 				other.gameObject.GetComponent<EnemyController>().LoseHealth(dmg + extradmg, true);
 
+=======
+				other.gameObject.GetComponent<EnemyController>().LoseHealth(dmg + extradmg, true);
+>>>>>>> afabece346e6b3b02d1afaebd65bbd7cb5425dc2
 			}
 			if(!piercing)
 			{
