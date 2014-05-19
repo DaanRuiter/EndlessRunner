@@ -12,14 +12,18 @@ public class GunSort : MonoBehaviour {
 	{
 		ResetGun ();
 	}
-	public void SetGunStats(string _weaponSort, int _speed, int _dmg, int _bulletSpeed, bool _piercing)
+	public void SetSlotStats(string _weaponSort, int _speed, int _dmg, int _bulletSpeed, bool _piercing)
 	{
 		weaponSort 		= _weaponSort;
 		speed      		= _speed;
 		dmg        		= _dmg;
 		bulletSpeed 	= _bulletSpeed;
 		piercing		= _piercing;
-		//SetTexture ();
+		SetTexture ();
+	}
+	void SetTexture () 
+	{
+		//blalblal
 	}
 	public void ResetGun()
 	{
