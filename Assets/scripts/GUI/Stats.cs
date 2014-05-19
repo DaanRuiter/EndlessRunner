@@ -11,6 +11,9 @@ public class Stats : MonoBehaviour {
 
 	//debugging only, later word dit alleen geupdate als er gold word ontvangen;
 	void Update(){
-		guiText.text = "" + player.GetComponent<PlayerStats>().GetGold();
+		guiText.text = "GOLD : " + player.GetComponent<PlayerStats>().GetGold() + "\n";
+		guiText.text += "LEVEL : " + player.GetComponent<PlayerStats>().GetLevel() + "\n";
+		guiText.text += "XP : " + player.GetComponent<PlayerStats>().GetXP() + "\n";
+		guiText.text += "XP NEEDED: " + player.GetComponent<PlayerStats>().GetXPTillLevel() + "\n";
 	}
 }

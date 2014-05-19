@@ -61,7 +61,7 @@ public class EnemyController : EnemyStats {
 		}
 	}
 	private void Shoot(){
-		GameObject newBullet = Instantiate(bullet, bulletSpawnPoint.position, bulletSpawnPoint.rotation) as GameObject;
+		Instantiate(bullet, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
 		shootTimer = Random.Range(10, 14);
 	}
 	
@@ -82,12 +82,14 @@ public class EnemyController : EnemyStats {
 	}
 
 	public void DestroyMe(){
+		Debug.Log ("Destroyme");
 		Destroy(this.gameObject);
 		Destroy(healthBar.gameObject);
 		Destroy(healthBar.GetComponent<Healthbar>().GetText());
 	}
 
 	public void DestroyMe(float _time){
+		Debug.Log ("Destroyme, time");
 		Destroy(this.gameObject, _time);
 		Destroy(healthBar.gameObject, _time);
 		Destroy(healthBar.GetComponent<Healthbar>().GetText(), _time);

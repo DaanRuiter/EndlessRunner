@@ -2,8 +2,6 @@
 using System.Collections;
 
 public class Healthbar : MonoBehaviour {
-
-
 	public TextMesh healthPrefab;
 
 	private float maxWidth = 2.6f;
@@ -15,6 +13,7 @@ public class Healthbar : MonoBehaviour {
 	private Vector3 HPPos;
 	private Vector3 dmgPos;
 	private bool follow;
+	private Vector3 newSize;
 
 	public void Init(float _width, float _height, bool _follow, float _x, float _y){
 		Vector3 newSize;
@@ -60,7 +59,8 @@ public class Healthbar : MonoBehaviour {
 		dmgPos.y = this.transform.position.y + 0.7f;
 
 		if(dmgText != null){
-			dmgPos.y += 0.05f;
+			dmgPos.y += 0.1f;
+			dmgText.transform.position = dmgPos;
 		}
 		dmgPos.z = this.transform.position.z;
 	}
@@ -72,7 +72,6 @@ public class Healthbar : MonoBehaviour {
 		float OnePHPB = this.transform.localScale.x / 100; //een percent van HP-Bar
 		float nW = NPNHP * OnePHPB; //Nieuwe width van de healthbar;
 
-		Vector3 newSize;
 		newSize.x = nW;
 		newSize.y = this.transform.localScale.y;
 		newSize.z = this.transform.localScale.z;
@@ -101,13 +100,29 @@ public class Healthbar : MonoBehaviour {
 		return healthText;
 	}
 
+	public void SetTextTag(string _tag){
+		healthText.tag = _tag;
+	}
+
+	public void ResetBar(){
+		newSize.x = maxWidth;
+		newSize.y = maxHeight;
+		this.transform.localScale = newSize;
+		healthText.text = "" + maxHealth;
+		Debug.Log (healthText.text);
+		this.transform.renderer.material.color = Color.green;
+	}
+
 	private void InitDmgText(float _dmg, bool _crit){
 		dmgText.color = Color.yellow;
+		dmgText.text = "-" + _dmg;
 		if(_crit){
 			dmgText.color = Color.red;
 			dmgText.characterSize += 0.05f;
+			dmgText.text += "!";
+			dmgText.text = "<i>" + dmgText.text + "</i>";
 		}
-		dmgText.text = "-" + _dmg;
+		dmgText.text = "<b>" + dmgText.text + "</b>";
 		Destroy(dmgText.gameObject, 0.5f);
 	}
 

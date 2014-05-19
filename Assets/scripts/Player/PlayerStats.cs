@@ -26,20 +26,27 @@ public class PlayerStats : MonoBehaviour {
 
 		healthBar = GameObject.Instantiate(prefab_healthBar, HPPos, Quaternion.identity) as GameObject;
 		healthBar.GetComponent<Healthbar>().Init(15f, 1f, false, HPPos.x, HPPos.y);
-		healthBar.GetComponent<Healthbar>().InitHealthText(this.lives);
+		healthBar.GetComponent<Healthbar>().InitHealthText(this.health);
+		healthBar.tag = "PlayerHealthBar";
+		healthBar.GetComponent<Healthbar>().SetTextTag("PlayerHealthText");
 	}
+
 	public void LoseHealth(float _dmg)
 	{
 		health -= _dmg;
+		healthBar.GetComponent<Healthbar>().UpdateBar(this.health, _dmg, false);
+
 		if(health <= 0)
 		{
 			Death();
 		}
 	}
+
 	void Death()
 	{
 		GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ().ResetStage ();
 	}
+
 	public void AddGold(float _gold)
 	{
 		gold += _gold;
@@ -47,6 +54,18 @@ public class PlayerStats : MonoBehaviour {
 
 	public float GetGold(){
 		return gold;
+	}
+
+	public float GetLevel(){
+		return level;
+	}
+
+	public float GetXP(){
+		return exp;
+	}
+
+	public float GetXPTillLevel(){
+		return expTillLevel;
 	}
 
 	public void AddExp(float _exp)

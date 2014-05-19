@@ -11,10 +11,11 @@ public class GameController : MonoBehaviour{
 
 	public void ResetStage()
 	{
+		GameObject.FindGameObjectWithTag ("BlackScreen").GetComponent<FadeScreen> ().StartFade ();
 		GameObject.FindGameObjectWithTag ("PlayerController").GetComponent<PlayerController>().ResetPos ();
 		GameObject.FindGameObjectWithTag ("Gun").GetComponent<GunSort>().ResetGun();
 		GameObject.FindGameObjectWithTag ("Shop").GetComponent<ShopController> ().Reset ();
-		GameObject.FindGameObjectWithTag ("BlackScreen").GetComponent<FadeScreen> ().StartFade ();
+		GameObject.FindGameObjectWithTag("PlayerHealthBar").GetComponent<Healthbar>().ResetBar();
 		GameObject[] enemys = GameObject.FindGameObjectsWithTag ("Enemy");
 		GameObject[] bullets = GameObject.FindGameObjectsWithTag ("Bullet");
 		GameObject[] healthbars = GameObject.FindGameObjectsWithTag ("HealthBar");
