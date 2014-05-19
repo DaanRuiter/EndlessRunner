@@ -9,6 +9,7 @@ public class ShopSlot : MonoBehaviour {
 	private int bulletSpeed   = 0;
 	private float gold		  = 0;
 	private bool piercing	  = false;
+	private int critChance 	  = 0;
 	public GUIText statsText;
 
 	void Start()
@@ -16,7 +17,7 @@ public class ShopSlot : MonoBehaviour {
 		gold = GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats> ().gold;
 	}
 
-	public void SetGunStats(string _weaponSort, float _price, int _speed, int _dmg, int _bulletSpeed, bool _piercing)
+	public void SetGunStats(string _weaponSort, float _price, int _speed, int _dmg, int _bulletSpeed, bool _piercing, int _critChance)
 	{
 		weaponSort 		= _weaponSort;
 		price      		= _price;
@@ -24,6 +25,7 @@ public class ShopSlot : MonoBehaviour {
 		dmg        		= _dmg;
 		bulletSpeed 	= _bulletSpeed;
 		piercing 		= _piercing;
+		critChance 		= _critChance;
 		SetTexture ();
 	}
 	private void SetTexture()
@@ -39,7 +41,7 @@ public class ShopSlot : MonoBehaviour {
 		if(price <= gold)
 		{
 			GameObject.FindGameObjectWithTag ("PlayerController").GetComponent<PlayerStats> ().gold -= price;
-			GameObject.FindGameObjectWithTag ("Gun").GetComponent<GunSort>().SetSlotStats(weaponSort,speed,dmg,bulletSpeed,piercing);
+			GameObject.FindGameObjectWithTag ("Gun").GetComponent<GunSort>().SetSlotStats(weaponSort,speed,dmg,bulletSpeed,piercing,critChance);
 		}
 	}
 	void OnMouseExit()
@@ -48,6 +50,6 @@ public class ShopSlot : MonoBehaviour {
 	}
 	private void MakeText()
 	{
-		statsText.text = "Stats" + "\n" + "Weapon: " + weaponSort + "\n" + "Damage: " + dmg + "\n" + "Speed: " + speed + "\n" + "Price: " + price;
+		statsText.text = "Stats" + "\n" + "Weapon: " + weaponSort + "\n" + "Damage: " + dmg + "\n" + "Speed: " + speed + "\n" + "Price: " + price + "\n" + "CritChance: " + critChance;
 	}
 }

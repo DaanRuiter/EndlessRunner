@@ -3,11 +3,6 @@ using System.Collections;
 
 public class FadeScreen : MonoBehaviour {
 	Color color = Color.black;
-	// Use this for initialization
-	void Start () 
-	{
-		StartFade ();
-	}
 	public void StartFade()
 	{
 		color.a = 1;

@@ -15,6 +15,7 @@ public class ShopController : MonoBehaviour {
 	private int[] gunSpeed 			= new int[3];
 	private int[] gunBulletSpeed 	= new int[3];
 	private bool[] gunPiercing		= new bool[3];
+	private int[] gunCritChance 	= new int[3];
 	private GameObject shop;
 
 	public float endPoint;
@@ -100,13 +101,14 @@ public class ShopController : MonoBehaviour {
 			gunPrice[i] 		= (float)gunstat[3];
 			gunBulletSpeed[i] 	= (int)gunstat[4];
 			gunPiercing[i]		= (bool)gunstat[5];
+			gunCritChance[i]	= (int)gunstat[6];
 		}
 	}
 	void SetGun()
 	{
 		for(int i = 0; i < WeaponAmmount; i++)
 		{
-			GameObject.Find("Weapon-"+(i+1)).GetComponent<ShopSlot>().SetGunStats(gunSort[i],gunPrice[i],gunSpeed[i],gunDmg[i],gunBulletSpeed[i],gunPiercing[i]);
+			GameObject.Find("Weapon-"+(i+1)).GetComponent<ShopSlot>().SetGunStats(gunSort[i],gunPrice[i],gunSpeed[i],gunDmg[i],gunBulletSpeed[i],gunPiercing[i],gunCritChance[i]);
 		}
 	}
 	public void Reset()

@@ -11,7 +11,6 @@ public class GameController : MonoBehaviour{
 
 	public void ResetStage()
 	{
-		GameObject.FindGameObjectWithTag ("PlayerController").GetComponent<PlayerStats>().LoseLive();
 		GameObject.FindGameObjectWithTag ("PlayerController").GetComponent<PlayerController>().ResetPos ();
 		GameObject.FindGameObjectWithTag ("Gun").GetComponent<GunSort>().ResetGun();
 		GameObject.FindGameObjectWithTag ("Shop").GetComponent<ShopController> ().Reset ();
