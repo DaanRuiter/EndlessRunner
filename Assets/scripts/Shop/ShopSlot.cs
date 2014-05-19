@@ -39,7 +39,7 @@ public class ShopSlot : MonoBehaviour {
 		if(price <= gold)
 		{
 			GameObject.FindGameObjectWithTag ("PlayerController").GetComponent<PlayerStats> ().gold -= price;
-			GameObject.FindGameObjectWithTag ("Gun").GetComponent<GunSort>().SetGunStats(weaponSort,speed,dmg,bulletSpeed,piercing);
+			GameObject.FindGameObjectWithTag ("Gun").GetComponent<GunSort>().SetSlotStats(weaponSort,speed,dmg,bulletSpeed,piercing);
 		}
 	}
 	void OnMouseExit()

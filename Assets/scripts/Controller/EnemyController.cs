@@ -30,7 +30,11 @@ public class EnemyController : EnemyStats {
 		barPos.x = this.transform.position.x;
 		barPos.y = this.transform.position.y + 1f;
 		barPos.z = - 0.2f;
+<<<<<<< HEAD
+		
+=======
 
+>>>>>>> 64a0473ad6159afb13ef0b9adc8d931767c7a4ff
 		healthBar = Instantiate(HPBarPrefab, barPos, Quaternion.identity) as GameObject;
 		health += 10f * (PlayerStats.level-1);
 		speed += 0.5f * (PlayerStats.level-1);
@@ -49,14 +53,16 @@ public class EnemyController : EnemyStats {
 			barPos.y = this.transform.position.y + 1f;
 
 			healthBar.transform.position = barPos;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 64a0473ad6159afb13ef0b9adc8d931767c7a4ff
 			if(canShoot && inRange){
 				shootTimer -= shootCooldown;
 				if(shootTimer <= 0){
 					Shoot();
 				}
 			}
-
 			if(DC.isOutOfBounds(this.gameObject)){
 				DestroyMe(1);
 			}
