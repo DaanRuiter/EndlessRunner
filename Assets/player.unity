@@ -870,6 +870,7 @@ MonoBehaviour:
   speed: 20
   dmg: 95
   bulletSpeed: 0
+  critChance: 0
   piercing: 0
 --- !u!114 &1274120835
 MonoBehaviour:
@@ -954,6 +955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbea4494210fa6b4aa3eeb682d3dba60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab_healthBar: {fileID: 100000, guid: b320175c07eb27a41a711b52017db003, type: 2}
   gold: 9999999
   lives: 0
   exp: 0

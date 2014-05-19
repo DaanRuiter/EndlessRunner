@@ -35,7 +35,7 @@ public class EnemyController : EnemyStats {
 		health += 10f * (PlayerStats.level-1);
 		speed += 0.5f * (PlayerStats.level-1);
 		shootCooldown -= 0.01f * (PlayerStats.level-1);
-		healthBar.GetComponent<Healthbar>().Init();
+		healthBar.GetComponent<Healthbar>().Init(2.6f, 0.45f, true, this.transform.position.x, this.transform.position.y);
 		healthBar.GetComponent<Healthbar>().InitHealthText(this.health);
 	}
 	
@@ -49,10 +49,6 @@ public class EnemyController : EnemyStats {
 			barPos.y = this.transform.position.y + 1f;
 
 			healthBar.transform.position = barPos;
-<<<<<<< HEAD
-
-=======
->>>>>>> a00a96cec1e798ced7a46bbb0979af6e7d158950
 			if(canShoot && inRange){
 				shootTimer -= shootCooldown;
 				if(shootTimer <= 0){

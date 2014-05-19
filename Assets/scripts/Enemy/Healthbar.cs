@@ -2,27 +2,45 @@
 using System.Collections;
 
 public class Healthbar : MonoBehaviour {
-	public const float MAX_WIDTH = 2.6f;
-	public const float MAX_HEIGHT = 0.45f;
+
 
 	public TextMesh healthPrefab;
-	
+
+	private float maxWidth = 2.6f;
+	private float maxHeight = 0.45f;
+
 	private float maxHealth;
 	private TextMesh healthText;
 	private TextMesh dmgText;
 	private Vector3 HPPos;
 	private Vector3 dmgPos;
+	private bool follow;
 
-	public void Init(){
+	public void Init(float _width, float _height, bool _follow, float _x, float _y){
 		Vector3 newSize;
-		newSize.x = MAX_WIDTH;
-		newSize.y = MAX_HEIGHT;
+		maxWidth = _width;
+		maxHeight = _height;
+
+		newSize.x = maxWidth;
+		newSize.y = maxHeight;
 		newSize.z = 1;
+
+		follow = _follow;
+
 		this.transform.localScale = newSize;
-		HPPos.x = this.transform.position.x - 1.2f;
-		HPPos.y = this.transform.position.y + 0.3f;
-		HPPos.z = this.transform.position.z;
+		if(follow){
+			HPPos.x = this.transform.position.x - 1.2f;
+			HPPos.y = this.transform.position.y + 0.3f;
+			HPPos.z = this.transform.position.z;
+		}else{
+			SetCustomPos(_x, _y);
+		}
 		healthText = Instantiate(healthPrefab, HPPos, transform.rotation) as TextMesh;
+	}
+
+	private void SetCustomPos(float _x, float _y){
+		HPPos.x = _x;
+		HPPos.y = _y;
 	}
 
 	public void InitHealthText(float _health){
@@ -31,10 +49,12 @@ public class Healthbar : MonoBehaviour {
 	}
 
 	private void Update(){
-		HPPos.x = this.transform.position.x - 1.2f;
-		HPPos.y = this.transform.position.y + 0.3f;
-		HPPos.z = this.transform.position.z;
-		healthText.transform.position = HPPos;
+		if(follow){
+			HPPos.x = this.transform.position.x - 1.2f;
+			HPPos.y = this.transform.position.y + 0.3f;
+			HPPos.z = this.transform.position.z;
+			healthText.transform.position = HPPos;
+		}
 
 		dmgPos.x = this.transform.position.x + 1.2f;
 		dmgPos.y = this.transform.position.y + 0.7f;
@@ -62,10 +82,10 @@ public class Healthbar : MonoBehaviour {
 		dmgText = Instantiate(healthPrefab, dmgPos, transform.rotation) as TextMesh;
 		InitDmgText(_dmg, _crit);
 
-		if(this.transform.lossyScale.x < (MAX_WIDTH / 3) * 2 ){
+		if(this.transform.lossyScale.x < (maxWidth / 3) * 2 ){
 			this.renderer.material.color = Color.yellow;
 		}
-		if(this.transform.lossyScale.x < (MAX_WIDTH / 3) * 1 ){
+		if(this.transform.lossyScale.x < (maxHeight / 3) * 1 ){
 			this.renderer.material.color = Color.red;
 		}
 
