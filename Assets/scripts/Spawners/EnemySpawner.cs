@@ -5,7 +5,7 @@ public class EnemySpawner : MonoBehaviour {
 	private const float LEVEL_X_MIN = -10;
 	private const float LEVEL_X_MAX = 10;
 	private const float LEVEL_Y_MIN = 20;
-	private const float LEVEL_Y_MAX = 25;
+	private const float LEVEL_Y_MAX = 23;
 
 	public GameObject movingEnemy;
 
@@ -15,7 +15,7 @@ public class EnemySpawner : MonoBehaviour {
 
 	private void Start(){
 		enemySpawnable = true;
-		spawnTimer = 10f;
+		spawnTimer = 5f;
 	}
 
 	private void Update () {

@@ -33,7 +33,7 @@ public class EnemyController : EnemyStats {
 
 		healthBar = Instantiate(HPBarPrefab, barPos, Quaternion.identity) as GameObject;
 		health += 10f * (PlayerStats.level-1);
-		speed += 0.5f * (PlayerStats.level-1); 
+		speed += 0.5f * (PlayerStats.level-1);
 		shootCooldown -= 0.01f * (PlayerStats.level-1);
 		healthBar.GetComponent<Healthbar>().Init();
 		healthBar.GetComponent<Healthbar>().InitHealthText(this.health);
@@ -67,7 +67,6 @@ public class EnemyController : EnemyStats {
 	
 	public void LoseHealth(float _dmg, bool _crit){
 		health -= _dmg;
-		healthBar.GetComponent<Healthbar> ().UpdateBar (_dmg, health);
 		if(health <= 0)
 		{
 			DestroyMe();
@@ -75,7 +74,7 @@ public class EnemyController : EnemyStats {
 			GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats>().AddExp(exp);
 		}
 
-		healthBar.GetComponent<Healthbar>().UpdateBar(this.health, _dmg);
+		healthBar.GetComponent<Healthbar>().UpdateBar(this.health, _dmg, _crit);
 	}
 
 	public void setRangeState(bool state){
