@@ -7,7 +7,11 @@ public class Healthbar : MonoBehaviour {
 
 	public TextMesh healthPrefab;
 
-	private TextMesh healthText;	
+	private float maxHealth;
+	private TextMesh healthText;
+	private TextMesh dmgText;
+	private Vector3 HPPos;
+	private Vector3 dmgPos;
 
 	public void Init(){
 		Vector3 newSize;
@@ -15,30 +19,48 @@ public class Healthbar : MonoBehaviour {
 		newSize.y = MAX_HEIGHT;
 		newSize.z = 1;
 		this.transform.localScale = newSize;
-		Vector3 HPPos;
 		HPPos.x = this.transform.position.x - 1.2f;
 		HPPos.y = this.transform.position.y + 0.3f;
 		HPPos.z = this.transform.position.z;
 		healthText = Instantiate(healthPrefab, HPPos, transform.rotation) as TextMesh;
-		healthText.transform.parent = transform;
 	}
 
 	public void InitHealthText(float _health){
 		healthText.text = "" + _health;
+		maxHealth = _health;
 	}
 
-	public void UpdateBar(float _dmg, float _mh){
-		float pH = _mh / 100;
-		float pD = _dmg / pH;
-		float pW = this.transform.localScale.x / 100;
-		float pTH = 100 - pD;
-		float nW = pW * pTH;
+	private void Update(){
+		HPPos.x = this.transform.position.x - 1.2f;
+		HPPos.y = this.transform.position.y + 0.3f;
+		HPPos.z = this.transform.position.z;
+		healthText.transform.position = HPPos;
+
+		dmgPos.x = this.transform.position.x + 1.2f;
+		dmgPos.y = this.transform.position.y + 0.7f;
+		if(dmgText != null){
+			dmgPos.y += 0.05f;
+		}
+		dmgPos.z = this.transform.position.z;
+	}
+
+	public void UpdateBar(float _nh, float _dmg){
+
+		float OnePMHP = maxHealth / 100; //een percent van Max Health
+		float NPNHP = _nh / OnePMHP; //nieuwe percentage van nieuwe Health
+		float OnePHPB = this.transform.localScale.x / 100; //een percent van HP-Bar
+		float nW = NPNHP * OnePHPB; //Nieuwe width van de healthnar;
 
 		Vector3 newSize;
 		newSize.x = nW;
 		newSize.y = this.transform.localScale.y;
 		newSize.z = this.transform.localScale.z;
+
 		this.gameObject.transform.localScale = newSize;
+
+		dmgText = Instantiate(healthPrefab, dmgPos, transform.rotation) as TextMesh;
+		InitDmgText(_dmg);
+
 		if(this.transform.lossyScale.x < (MAX_WIDTH / 3) * 2 ){
 			this.renderer.material.color = Color.yellow;
 		}
@@ -51,6 +73,17 @@ public class Healthbar : MonoBehaviour {
 			this.transform.localScale = newSize;
 		}
 
-		healthText.text = "" + _mh;
+		healthText.text = "" + _nh;
 	}
+
+	public TextMesh GetText(){
+		return healthText;
+	}
+
+	private void InitDmgText(float _dmg){
+		dmgText.renderer.material.color = Color.red;
+		dmgText.text = "-" + _dmg;
+		Destroy(dmgText.gameObject, 0.5f);
+	}
+
 }

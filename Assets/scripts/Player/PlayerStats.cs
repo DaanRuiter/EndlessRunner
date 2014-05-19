@@ -31,6 +31,11 @@ public class PlayerStats : MonoBehaviour {
 	{
 		gold += _gold;
 	}
+
+	public float GetGold(){
+		return gold;
+	}
+
 	public void AddExp(float _exp)
 	{
 		exp += _exp;

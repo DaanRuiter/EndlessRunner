@@ -30,7 +30,11 @@ public class EnemyController : EnemyStats {
 		barPos.x = this.transform.position.x;
 		barPos.y = this.transform.position.y + 1f;
 		barPos.z = - 0.2f;
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> 64a0473ad6159afb13ef0b9adc8d931767c7a4ff
 		healthBar = Instantiate(HPBarPrefab, barPos, Quaternion.identity) as GameObject;
 		health += 10f * (PlayerStats.level-1);
 		speed += 0.5f * (PlayerStats.level-1); 
@@ -40,8 +44,7 @@ public class EnemyController : EnemyStats {
 	}
 	
 	protected virtual void Update () {
-		if(DC.paused != true)
-		{
+		if(DC.paused != true){
 			Debug.Log (health);
 			Vector3 dir = player.transform.position - this.transform.position;
 			float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -51,6 +54,10 @@ public class EnemyController : EnemyStats {
 			barPos.y = this.transform.position.y + 1f;
 
 			healthBar.transform.position = barPos;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 64a0473ad6159afb13ef0b9adc8d931767c7a4ff
 			if(canShoot && inRange){
 				shootTimer -= shootCooldown;
 				if(shootTimer <= 0){
@@ -66,7 +73,7 @@ public class EnemyController : EnemyStats {
 		GameObject newBullet = Instantiate(bullet, bulletSpawnPoint.position, bulletSpawnPoint.rotation) as GameObject;
 		shootTimer = Random.Range(10, 14);
 	}
-
+	
 	public void LoseHealth(float _dmg, bool _crit){
 		health -= _dmg;
 		healthBar.GetComponent<Healthbar> ().UpdateBar (_dmg, health);
@@ -76,6 +83,8 @@ public class EnemyController : EnemyStats {
 			GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats>().AddGold(gold);
 			GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats>().AddExp(exp);
 		}
+
+		healthBar.GetComponent<Healthbar>().UpdateBar(this.health, _dmg);
 	}
 
 	public void setRangeState(bool state){
@@ -85,10 +94,12 @@ public class EnemyController : EnemyStats {
 	public void DestroyMe(){
 		Destroy(this.gameObject);
 		Destroy(healthBar.gameObject);
+		Destroy(healthBar.GetComponent<Healthbar>().GetText());
 	}
 
 	public void DestroyMe(float _time){
 		Destroy(this.gameObject, _time);
 		Destroy(healthBar.gameObject, _time);
+		Destroy(healthBar.GetComponent<Healthbar>().GetText(), _time);
 	}
 }

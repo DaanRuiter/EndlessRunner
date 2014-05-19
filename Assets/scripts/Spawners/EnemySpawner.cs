@@ -39,7 +39,7 @@ public class EnemySpawner : MonoBehaviour {
 
 	private void SpawnEnemy(string type){
 		if(type.Equals("moving")){
-			spawnTimer = 1000;
+			spawnTimer = 10;
 			spawnPoint.x = getRandomX();
 			spawnPoint.y = getRandomY();
 			GameObject enem = Instantiate(movingEnemy, spawnPoint, Quaternion.identity) as GameObject;
