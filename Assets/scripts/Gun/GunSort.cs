@@ -24,7 +24,7 @@ public class GunSort : MonoBehaviour {
 	public void ResetGun()
 	{
 		weaponSort 		= "Default";
-		speed      		= 30;
+		speed      		= 50;
 		dmg        		= 35;
 		bulletSpeed 	= 20;
 		piercing 		= false;
