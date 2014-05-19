@@ -57,8 +57,6 @@ public class Healthbar : MonoBehaviour {
 		newSize.y = this.transform.localScale.y;
 		newSize.z = this.transform.localScale.z;
 
-		missingHealth = MAX_WIDTH - nW / 2;
-
 		this.gameObject.transform.localScale = newSize;
 
 		dmgText = Instantiate(healthPrefab, dmgPos, transform.rotation) as TextMesh;

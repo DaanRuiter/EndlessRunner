@@ -31,7 +31,7 @@ public class ShootGun : MonoBehaviour {
 		if(gunSort != "Shotgun")
 		{
 			var newBullet = Instantiate (bullet, spawnPoint.position, spawnPoint.rotation) as GameObject;
-			newBullet.GetComponent<BulletController> ().setStats (_speed, _dmg,_piercing,_critChance/*, _bullet*/);
+			newBullet.GetComponent<BulletController> ().setStats (_speed, _dmg, _piercing, _critChance/*, _bullet*/);
 		} else 
 		{
 			float extraRot = -0.1f;
@@ -40,7 +40,7 @@ public class ShootGun : MonoBehaviour {
 				Quaternion spawnPointRot = spawnPoint.rotation;
 				spawnPointRot.z += extraRot;
 				var newBullet = Instantiate (bullet, spawnPoint.position, spawnPointRot) as GameObject;
-				newBullet.GetComponent<BulletController> ().setStats (_speed, _dmg,_piercing,_critChance/*, _bullet*/);
+				newBullet.GetComponent<BulletController> ().setStats (_speed, _dmg, _piercing, _critChance/*, _bullet*/);
 				extraRot += 0.1f;
 			}
 		}
