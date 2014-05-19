@@ -282,7 +282,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 476777935}
   m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106829}
-  m_LocalPosition: {x: .304309666, y: .175956443, z: 0}
+  m_LocalPosition: {x: .304309666, y: .175956443, z: -.100000001}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1137678131}
@@ -401,7 +401,7 @@ GameObject:
   - 114: {fileID: 1137678132}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Untagged
+  m_TagString: Cannon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -429,6 +429,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cd7e39bb43d5544e92d53f1ecc7436f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cannonBullet: {fileID: 100000, guid: 8c58729663af9aa428d47cc123670de5, type: 2}
+  aimPoint: {fileID: 476777936}
 --- !u!23 &1137678133
 Renderer:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AbilityController : MonoBehaviour {
 	bool cdAbility01 = false; 
-	float coolDown = 0.5f;
+	float coolDown = 5f;
 	void Update () 
 	{
 		if(Input.GetKeyDown(KeyCode.Alpha1) && !cdAbility01)
