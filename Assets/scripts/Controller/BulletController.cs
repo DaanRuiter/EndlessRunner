@@ -27,7 +27,7 @@ public class BulletController : MonoBehaviour {
 		critChance = _critChance;
 		//this.renderer.material.SetTexture
 	}
-	void Update () 
+	protected virtual void Update () 
 	{
 		if(DC.paused != true)
 		{
@@ -35,6 +35,11 @@ public class BulletController : MonoBehaviour {
 			Vector2 pos = this.transform.position;
 			pos.y -= 3f * Time.deltaTime;
 			this.transform.position = pos;
+			bool fireTrail = GameObject.FindGameObjectWithTag("Gun").GetComponent<GunSort>().fireTrail;
+			if(fireTrail)
+			{
+				//instantiate fireTrail
+			}
 		}
 	}
 	protected virtual void OnTriggerEnter2D(Collider2D other)
@@ -44,11 +49,10 @@ public class BulletController : MonoBehaviour {
 			int criticalStrike = Random.Range(0,101);
 
 			if(criticalStrike > critChance){
-				float extradmg = Random.Range(0,5);
+				int extradmg = (int)Random.Range(dmg*0.1f,dmg*0.5f);
 				other.gameObject.GetComponent<EnemyController>().LoseHealth(dmg + extradmg, false);
 			} else {
-				float extradmg = Random.Range(10,15);
-
+				int extradmg = (int)Random.Range(dmg*0.10f,dmg*0.20f);
 				other.gameObject.GetComponent<EnemyController>().LoseHealth(dmg + extradmg, true);
 			}
 			if(!piercing)

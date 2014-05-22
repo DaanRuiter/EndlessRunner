@@ -6,6 +6,23 @@ TagManager:
   - 
   - EnemyHPText
   - 
+  - Enemy
+  - AbilityController
+  - Cannon
+  - Bullet
+  - Road
+  - BlackScreen
+  - Shop
+  - ShopInterface
+  - Gun
+  - PlayerController
+  - HealthBar
+  - DataCenter
+  - ShopSlot
+  - EnemyRange
+  - PlayerHealthBar
+  - PlayerHealthText
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast

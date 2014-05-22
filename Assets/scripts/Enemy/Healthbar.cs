@@ -109,7 +109,6 @@ public class Healthbar : MonoBehaviour {
 		newSize.y = maxHeight;
 		this.transform.localScale = newSize;
 		healthText.text = "" + maxHealth;
-		Debug.Log (healthText.text);
 		this.transform.renderer.material.color = Color.green;
 	}
 

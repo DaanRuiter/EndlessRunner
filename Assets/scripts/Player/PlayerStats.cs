@@ -45,6 +45,7 @@ public class PlayerStats : MonoBehaviour {
 	void Death()
 	{
 		GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ().ResetStage ();
+		health = 100;
 	}
 
 	public void AddGold(float _gold)
