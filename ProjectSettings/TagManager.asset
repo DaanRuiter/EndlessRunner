@@ -17,12 +17,10 @@ TagManager:
   - EnemyHPText
   - AbilityController
   - ShopSlot
-<<<<<<< HEAD
   - PlayerHealthBar
   - PlayerHealthText
-=======
+  - Barrier
   - Cannon
->>>>>>> 972f113686512a4645968908fd989c912b754fd8
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

@@ -11,14 +11,7 @@ public class BulletController : MonoBehaviour {
 	{
 		Destroy(gameObject, destroyTime);
 	}
-	
-	void OnCollisionEnter(Collision other) 
-	{
-		if(other.transform.tag == "Barrier") 
-		{
-			Destroy(this.gameObject);
-		}
-	}
+
 	public void setStats(float _speed, float _dmg, bool _piercing,int _critChance/*, Texture _bullet*/)
 	{
 		speed 	= _speed;
@@ -32,9 +25,6 @@ public class BulletController : MonoBehaviour {
 		if(DC.paused != true)
 		{
 			this.transform.Translate (new Vector2(0,1) * speed * Time.deltaTime);
-			Vector2 pos = this.transform.position;
-			pos.y -= 3f * Time.deltaTime;
-			this.transform.position = pos;
 		}
 	}
 	protected virtual void OnTriggerEnter2D(Collider2D other)
@@ -56,5 +46,12 @@ public class BulletController : MonoBehaviour {
 				Destroy(this.gameObject);
 			}
 		}
+
+		Debug.Log (other.transform.tag);
+		if(other.transform.tag == "Barrier") 
+		{
+			Destroy(this.gameObject);
+		}
+
 	}
 }

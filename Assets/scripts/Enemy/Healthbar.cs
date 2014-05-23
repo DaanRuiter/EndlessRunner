@@ -100,6 +100,10 @@ public class Healthbar : MonoBehaviour {
 		return healthText;
 	}
 
+	public void addText(string txt){
+		healthText.text += txt;
+	}
+
 	public void SetTextTag(string _tag){
 		healthText.tag = _tag;
 	}
@@ -109,7 +113,6 @@ public class Healthbar : MonoBehaviour {
 		newSize.y = maxHeight;
 		this.transform.localScale = newSize;
 		healthText.text = "" + maxHealth;
-		Debug.Log (healthText.text);
 		this.transform.renderer.material.color = Color.green;
 	}
 

@@ -9,11 +9,11 @@ public class Stats : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag("PlayerController");
 	}
 
-	//debugging only, later word dit alleen geupdate als er gold word ontvangen;
+	//debugging only, later word dit alleen geupdate als er gold word ontvangen, level up etc.;
 	void Update(){
 		guiText.text = "GOLD : " + player.GetComponent<PlayerStats>().GetGold() + "\n";
 		guiText.text += "LEVEL : " + player.GetComponent<PlayerStats>().GetLevel() + "\n";
 		guiText.text += "XP : " + player.GetComponent<PlayerStats>().GetXP() + "\n";
-		guiText.text += "XP NEEDED: " + player.GetComponent<PlayerStats>().GetXPTillLevel() + "\n";
+		guiText.text += "XP NEEDED: " + (int) player.GetComponent<PlayerStats>().GetXPTillLevel() + "\n";
 	}
 }

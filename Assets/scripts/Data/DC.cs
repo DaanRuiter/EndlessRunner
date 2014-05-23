@@ -2,12 +2,20 @@
 using System.Collections;
 
 public class DC : MonoBehaviour {
+	//custom datacenter
+
+	public static float LEVEL_X_MIN = -10;
+	public static float LEVEL_X_MAX = 10;
+	public static float LEVEL_Y_MIN = 20;
+	public static float LEVEL_Y_MAX = 22;
 
 	public Texture[] _bulletTextures;
 	public Texture[] _roadTextures;
 
 	public static bool paused;
 	public static Texture[] roadTextures;
+
+
 	void Awake(){
 		roadTextures = _roadTextures;
 	}
@@ -33,7 +41,18 @@ public class DC : MonoBehaviour {
 		if(r < 0){r = 0;}
 		return r;
 	}
+
+	public static int GetRandomRange(float x, float y){
+		int r = (int) Random.Range(x, y);
+		if(r < 0){r = 0;}
+		return r;
+	}
+
 	public static bool isOutOfBounds(GameObject obj){
 		return obj.transform.position.y < Camera.main.camera.transform.position.y - Camera.main.camera.orthographicSize;
+	}
+
+	public static bool isOutOfBoundsUp(GameObject obj){
+		return obj.transform.position.y > Camera.main.camera.transform.position.y + Camera.main.camera.orthographicSize;
 	}
 }

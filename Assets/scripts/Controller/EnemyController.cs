@@ -18,14 +18,15 @@ public class EnemyController : EnemyStats {
 	public string type;
 	//types (no caps):
 	//moving
+	//stationary
 
 	private float shootTimer;
 
-	protected void Start () {
+	protected virtual void Start () {
 		shootTimer = 0f;
 		alive = true;
 		pos = new Vector2(this.transform.position.x, this.transform.position.y);
-		player = GameObject.FindGameObjectWithTag("Player");
+		player = GameObject.FindGameObjectWithTag("PlayerController");
 
 		barPos.x = this.transform.position.x;
 		barPos.y = this.transform.position.y + 1f;
@@ -37,6 +38,8 @@ public class EnemyController : EnemyStats {
 		shootCooldown -= 0.01f * (PlayerStats.level-1);
 		healthBar.GetComponent<Healthbar>().Init(2.6f, 0.45f, true, this.transform.position.x, this.transform.position.y);
 		healthBar.GetComponent<Healthbar>().InitHealthText(this.health);
+		//DEBUG ONLY \/
+		healthBar.GetComponent<Healthbar>().addText("  -  " + this.type);
 	}
 	
 	protected virtual void Update () {
@@ -75,21 +78,25 @@ public class EnemyController : EnemyStats {
 		}
 
 		healthBar.GetComponent<Healthbar>().UpdateBar(this.health, _dmg, _crit);
+		//DEBUG ONLY \/
+		healthBar.GetComponent<Healthbar>().addText("  -  " + this.type);
 	}
 
 	public void setRangeState(bool state){
 		inRange = state;
 	}
 
+	public string GetType(){
+		return this.type;
+	}
+
 	public void DestroyMe(){
-		Debug.Log ("Destroyme");
 		Destroy(this.gameObject);
 		Destroy(healthBar.gameObject);
 		Destroy(healthBar.GetComponent<Healthbar>().GetText());
 	}
 
 	public void DestroyMe(float _time){
-		Debug.Log ("Destroyme, time");
 		Destroy(this.gameObject, _time);
 		Destroy(healthBar.gameObject, _time);
 		Destroy(healthBar.GetComponent<Healthbar>().GetText(), _time);
