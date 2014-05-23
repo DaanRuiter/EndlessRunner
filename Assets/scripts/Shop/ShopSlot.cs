@@ -10,6 +10,7 @@ public class ShopSlot : MonoBehaviour {
 	private float gold		  = 0;
 	private bool piercing	  = false;
 	private int critChance 	  = 0;
+	private bool bought		  = false;
 	public GUIText statsText;
 
 	void Start()
@@ -38,10 +39,11 @@ public class ShopSlot : MonoBehaviour {
 	}
 	void OnMouseDown()
 	{
-		if(price <= gold)
+		if(price <= gold && !bought)
 		{
 			GameObject.FindGameObjectWithTag ("PlayerController").GetComponent<PlayerStats> ().gold -= price;
 			GameObject.FindGameObjectWithTag ("Gun").GetComponent<GunSort>().SetSlotStats(weaponSort,speed,dmg,bulletSpeed,piercing,critChance);
+			bought = true;
 		}
 	}
 	void OnMouseExit()
@@ -50,6 +52,10 @@ public class ShopSlot : MonoBehaviour {
 	}
 	private void MakeText()
 	{
-		statsText.text = "Stats" + "\n" + "Weapon: " + weaponSort + "\n" + "Damage: " + dmg + "\n" + "Speed: " + speed + "\n" + "CritChance: " + critChance + "\n" + "Price: " + price;
+		if(!bought){
+			statsText.text = "Stats" + "\n" + "Weapon: " + weaponSort + "\n" + "Damage: " + dmg + "\n" + "Speed: " + speed + "\n" + "CritChance: " + critChance + "\n" + "Price: " + price;
+		} else {
+			statsText.text = "Out of stock!";
+		}
 	}
 }

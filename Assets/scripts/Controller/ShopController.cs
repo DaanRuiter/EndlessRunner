@@ -40,13 +40,13 @@ public class ShopController : MonoBehaviour {
 				{
 					activeState = true;
 					startInvokeAble = false;
-					float randomTime = Random.Range (5f, 10f);
+					float randomTime = Random.Range (7.5f, 15f);
 					Invoke("GoOutGame", randomTime);
 					getGun();
 				}
 			}
 			//als de shop niet in de stage mag.
-			else if(this.transform.position.y >= beginPoint)
+			else if(!inToStage && this.transform.position.y >= beginPoint)
 			{
 				activeState = false;
 				this.transform.Translate (new Vector2 (0f, -1f) * movementSpeed * Time.deltaTime);

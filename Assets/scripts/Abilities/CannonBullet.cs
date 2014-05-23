@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CannonBullet : BulletController {
 	private float bombRadius = 7.5f;
-	private float bombDamage = 700f;
+	protected float bombDamage = 700f;
 	public GameObject explosion;
 	void Start()
 	{

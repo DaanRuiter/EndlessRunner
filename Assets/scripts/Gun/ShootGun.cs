@@ -4,6 +4,8 @@ using System.Collections;
 public class ShootGun : MonoBehaviour {
 	public Transform spawnPoint;
 	public GameObject bullet;
+	public GameObject granade;
+	private bool granadeOnCoolDown = false;
 	private bool shootAble = true;
 	
 	void Update () 
@@ -44,6 +46,20 @@ public class ShootGun : MonoBehaviour {
 				extraRot += 0.1f;
 			}
 		}
+		bool granadeLauncher = this.GetComponent<GunSort> ().granadeLauncher;
+		if(granadeLauncher)
+		{
+			if(granadeOnCoolDown == false)
+			{
+				granadeOnCoolDown = true;
+				Invoke("setGranadeCd",5f);
+				Instantiate(granade,spawnPoint.position,spawnPoint.rotation);
+			}
+		}
+	}
+	void setGranadeCd()
+	{
+		granadeOnCoolDown = false;
 	}
 	private void ShootAble()
 	{

@@ -7,6 +7,10 @@ public class GunSort : MonoBehaviour {
 	public int dmg			  = 0;
 	public int bulletSpeed    = 0;
 	public int critChance     = 0;
+	private int dCritChance   = 0;
+	public bool laserSight    = true;
+	public bool granadeLauncher = true;
+	public bool fireTrail	  = false;
 	public bool piercing	  = false;
 
 	void Start () 
@@ -21,11 +25,21 @@ public class GunSort : MonoBehaviour {
 		bulletSpeed 	= _bulletSpeed;
 		piercing		= _piercing;
 		critChance      = _critChance;
+		dCritChance 	= _critChance;
 		SetTexture ();
 	}
 	void SetTexture () 
 	{
 		//blalblal
+	}
+	public void CritSpecial()
+	{
+		critChance = 100;
+		Invoke ("OffCrit", 2f);
+	}
+	void OffCrit()
+	{
+		critChance = dCritChance;
 	}
 	public void ResetGun()
 	{
