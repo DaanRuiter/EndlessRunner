@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour {
 	public float gold;
 	public float health;
 	public float exp;
+	public static int statPoints;
 
 	private float expTillLevel;
 	private GameObject healthBar;
@@ -77,6 +78,7 @@ public class PlayerStats : MonoBehaviour {
 			expTillLevel += expTillLevel * 0.75f;
 			level += 1;
 			exp = 0;
+			statPoints += 1;
 		}
 	}
 }
