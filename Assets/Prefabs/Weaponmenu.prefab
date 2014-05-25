@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2300004}
   - 114: {fileID: 11400006}
   m_Layer: 0
-  m_Name: Ability
+  m_Name: LaserSight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ GameObject:
   - 23: {fileID: 2300002}
   - 114: {fileID: 11400004}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Granadelauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,7 +51,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400002}
   m_Layer: 0
-  m_Name: Weapon
+  m_Name: Firetrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,8 +86,8 @@ GameObject:
   - 23: {fileID: 2300006}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: Upgrademenu
-  m_TagString: UpgradeMenu
+  m_Name: Weaponmenu
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -334,10 +334,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fe76a2b6d020684db65f652472bbae9, type: 3}
+  m_Script: {fileID: 11500000, guid: 5067409f13f319342abce2a7d7331530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponUpgradeMenu: {fileID: 100008, guid: 4bc792bbf109b8040a209c242fb153fb, type: 2}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -346,10 +345,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54ba414cb46cb4044bd290d817096ddb, type: 3}
+  m_Script: {fileID: 11500000, guid: f373216f2058d374cae23a7eb2607b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerUpgradeMenu: {fileID: 100006, guid: 78bc9d2ca37918440ad1386db0b4de95, type: 2}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -358,10 +356,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f14cddf94fce50c429328ea039df0bf5, type: 3}
+  m_Script: {fileID: 11500000, guid: b54ce72879dd33c4d9a0342316e09a34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityUpgradeMenu: {fileID: 100006, guid: 52f8aefa86b9b3b49beb1bb8a2e237f7, type: 2}
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1

@@ -5,7 +5,7 @@ public class UpgradeMenuController : MonoBehaviour {
 	public GameObject upgradeMenu;
 	void Update () 
 	{
-		if(Input.GetKeyDown(KeyCode.K))
+		if(Input.GetKeyDown(KeyCode.K) && !DC.paused)
 		{
 			DC.paused = true;
 			Instantiate(upgradeMenu,this.transform.position,this.transform.rotation);
