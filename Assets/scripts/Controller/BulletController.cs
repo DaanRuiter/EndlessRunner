@@ -25,17 +25,11 @@ public class BulletController : MonoBehaviour {
 		if(DC.paused != true)
 		{
 			this.transform.Translate (new Vector2(0,1) * speed * Time.deltaTime);
-<<<<<<< HEAD
-=======
-			Vector2 pos = this.transform.position;
-			pos.y -= 3f * Time.deltaTime;
-			this.transform.position = pos;
 			bool fireTrail = GameObject.FindGameObjectWithTag("Gun").GetComponent<GunSort>().fireTrail;
 			if(fireTrail)
 			{
 				//instantiate fireTrail
 			}
->>>>>>> b4a163a01df6bbca5b2249c32c2f8c339527c436
 		}
 	}
 	protected virtual void OnTriggerEnter2D(Collider2D other)
@@ -57,7 +51,6 @@ public class BulletController : MonoBehaviour {
 			}
 		}
 
-		Debug.Log (other.transform.tag);
 		if(other.transform.tag == "Barrier") 
 		{
 			Destroy(this.gameObject);

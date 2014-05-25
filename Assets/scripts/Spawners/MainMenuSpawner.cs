@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemySpawner : MonoBehaviour {
+public class MainMenuSpawner : MonoBehaviour {
 
-	public GameObject[] enemies;
+	public GameObject[] enemyTypes;
 
 	private bool enemySpawnable;
 	private float spawnTimer;
@@ -37,11 +37,7 @@ public class EnemySpawner : MonoBehaviour {
 		spawnTimer = 12.5f;
 		spawnPoint.x = getRandomX();
 		spawnPoint.y = getRandomY();
-		GameObject enem = Instantiate(enemies[DC.GetRandomRange(enemies.Length)], spawnPoint, Quaternion.identity) as GameObject;
-		GameController.enemies.Add(enem);
+		Instantiate(enemyTypes[DC.GetRandomRange(enemyTypes.Length)], spawnPoint, Quaternion.identity);
 		enemySpawnable = true;
-		if(enem.GetComponent<EnemyController>().GetEnemType().Equals("stationary")){
-			enem.GetComponent<StationaryEnemy>().SetGoToPos(DC.LEVEL_Y_MIN - Random.Range (12, 18));
-		}
 	}
 }

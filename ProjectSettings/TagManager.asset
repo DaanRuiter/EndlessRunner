@@ -3,32 +3,24 @@
 --- !u!78 &1
 TagManager:
   tags:
-  - 
-  - EnemyHPText
-  - 
-  - Enemy
-  - AbilityController
-  - Cannon
-  - Bullet
-  - Road
-  - BlackScreen
   - Shop
   - ShopInterface
-  - Gun
   - PlayerController
+  - Gun
+  - Bullet
+  - Enemy
   - HealthBar
+  - Road
   - DataCenter
+  - BlackScreen
+  - EnemyRange
+  - EnemyHPText
+  - AbilityController
   - ShopSlot
-<<<<<<< HEAD
   - PlayerHealthBar
   - PlayerHealthText
   - Barrier
   - Cannon
-=======
-  - EnemyRange
-  - PlayerHealthBar
-  - PlayerHealthText
->>>>>>> b4a163a01df6bbca5b2249c32c2f8c339527c436
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -62,8 +54,4 @@ TagManager:
   User Layer 29: 
   User Layer 30: 
   User Layer 31: 
-  m_SortingLayers:
-  - name: Default
-    userID: 0
-    uniqueID: 0
-    locked: 0
+  m_SortingLayers: []

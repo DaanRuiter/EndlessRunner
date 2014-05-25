@@ -10,7 +10,7 @@ public class GunSort : MonoBehaviour {
 	private int dCritChance   = 0;
 	public bool laserSight    = true;
 	public bool granadeLauncher = true;
-	public bool fireTrail	  = false;
+	public bool fireTrail	  = true;
 	public bool piercing	  = false;
 
 	void Start () 
