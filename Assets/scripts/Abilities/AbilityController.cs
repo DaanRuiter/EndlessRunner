@@ -2,16 +2,17 @@
 using System.Collections;
 
 public class AbilityController : MonoBehaviour {
-	bool cdAbility01 = false; 
-	bool cdAbility02 = false;
-	float coolDown = 5f;
+	private bool cdAbility01 = false; 
+	private bool cdAbility02 = false;
+	private float coolDown = 5f;
+	private bool[] unlocked = new bool[2];
 	void Update () 
 	{
-		if(Input.GetKeyDown(KeyCode.Alpha1) && !cdAbility01)
+		if(Input.GetKeyDown(KeyCode.Alpha1) && !cdAbility01 && unlocked[0])
 		{
 			ShootCannon();
 		}
-		if(Input.GetKeyDown (KeyCode.Alpha2) && !cdAbility02)
+		if(Input.GetKeyDown (KeyCode.Alpha2) && !cdAbility02 && unlocked[1])
 		{
 			GetCriticals();
 		}
@@ -32,5 +33,8 @@ public class AbilityController : MonoBehaviour {
 	}
 	void SetCd02(){
 		cdAbility02 = false;
+	}
+	public void UnlockAbility(int number){
+		unlocked[number] = true;
 	}
 }
