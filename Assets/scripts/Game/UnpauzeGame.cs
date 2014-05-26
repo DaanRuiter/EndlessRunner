@@ -3,11 +3,11 @@ using System.Collections;
 
 public class UnpauzeGame : MonoBehaviour {
 	private GameObject shop;
+	private GameObject upgradeMenu;
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(PauseCoroutine());
 	}
-	
 	IEnumerator PauseCoroutine() 
 	{
 		while (true)
@@ -19,6 +19,10 @@ public class UnpauzeGame : MonoBehaviour {
 				if(shop != null)
 				{
 					Destroy(shop);
+				}
+				upgradeMenu = GameObject.FindGameObjectWithTag("UpgradeMenu");
+				if(upgradeMenu != null){
+					Destroy (upgradeMenu);
 				}
 			}    
 			yield return null;    
