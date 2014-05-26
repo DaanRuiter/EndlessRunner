@@ -86,7 +86,7 @@ public class EnemyController : EnemyStats {
 		inRange = state;
 	}
 
-	public string GetType(){
+	public string GetEnemType(){
 		return this.type;
 	}
 
