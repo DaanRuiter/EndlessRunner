@@ -1176,7 +1176,7 @@ GameObject:
   - 114: {fileID: 1274120835}
   - 120: {fileID: 1274120836}
   m_Layer: 0
-  m_Name: gun
+  m_Name: Gun
   m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1267,9 +1267,9 @@ MonoBehaviour:
   dmg: 95
   bulletSpeed: 0
   critChance: 0
-  laserSight: 1
-  granadeLauncher: 1
-  fireTrail: 1
+  laserSight: 0
+  granadeLauncher: 0
+  fireTrail: 0
   piercing: 0
 --- !u!114 &1274120835
 MonoBehaviour:

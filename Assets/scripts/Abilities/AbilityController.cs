@@ -6,6 +6,10 @@ public class AbilityController : MonoBehaviour {
 	private bool cdAbility02 = false;
 	private float coolDown = 5f;
 	private bool[] unlocked = new bool[2];
+	void Start () {
+		unlocked [0] = true;
+		unlocked [1] = true;
+		}
 	void Update () 
 	{
 		if(Input.GetKeyDown(KeyCode.Alpha1) && !cdAbility01 && unlocked[0])

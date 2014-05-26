@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 1e+07
-  explosion: {fileID: 100000, guid: 33ed3481cde09d54f88e261ee1261980, type: 2}
+  explosion: {fileID: 100000, guid: 48c1bc138dbf52743a5ab210d39259fc, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
