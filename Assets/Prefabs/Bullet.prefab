@@ -14,6 +14,7 @@ GameObject:
   - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
   - 64: {fileID: 6400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -111,6 +112,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 3
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4745f58451a008647ae6c1e5837def88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire: {fileID: 100000, guid: b89ab73a620d91e41929d20473f57103, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

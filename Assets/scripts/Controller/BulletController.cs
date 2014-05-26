@@ -25,14 +25,9 @@ public class BulletController : MonoBehaviour {
 		if(DC.paused != true)
 		{
 			this.transform.Translate (new Vector2(0,1) * speed * Time.deltaTime);
-<<<<<<< HEAD
-			bool fireTrail = GameObject.FindGameObjectWithTag("Gun").GetComponent<GunSort>().fireTrail;
-			if(fireTrail)
-			{
-				//instantiate fireTrail
+			if(DC.isOutOfBoundsUp(this.gameObject)){
+				Destroy(this.gameObject);
 			}
-=======
->>>>>>> 68fa94deee70146a95b5cccee90969ceed552fe3
 		}
 	}
 	protected virtual void OnTriggerEnter2D(Collider2D other)
@@ -42,10 +37,10 @@ public class BulletController : MonoBehaviour {
 			int criticalStrike = Random.Range(0,101);
 
 			if(criticalStrike > critChance){
-				int extradmg = (int)Random.Range(dmg*0.1f,dmg*0.5f);
+				int extradmg = (int)Random.Range(dmg*0.10f,dmg*0.30f);
 				other.gameObject.GetComponent<EnemyController>().LoseHealth(dmg + extradmg, false);
 			} else {
-				int extradmg = (int)Random.Range(dmg*0.10f,dmg*0.20f);
+				int extradmg = (int)Random.Range(dmg*0.25f,dmg*0.50f);
 				other.gameObject.GetComponent<EnemyController>().LoseHealth(dmg + extradmg, true);
 			}
 			if(!piercing)
@@ -53,10 +48,6 @@ public class BulletController : MonoBehaviour {
 				Destroy(this.gameObject);
 			}
 		}
-<<<<<<< HEAD
-
-=======
->>>>>>> 68fa94deee70146a95b5cccee90969ceed552fe3
 		if(other.transform.tag == "Barrier") 
 		{
 			Destroy(this.gameObject);

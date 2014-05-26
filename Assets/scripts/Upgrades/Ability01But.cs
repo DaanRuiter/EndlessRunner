@@ -7,7 +7,7 @@ public class Ability01But : MonoBehaviour {
 		if(PlayerStats.statPoints != 0)
 		{
 			PlayerStats.statPoints -= 1;
-			GameObject.FindGameObjectWithTag("AbilityController").GetComponent<AbilityController>().UnlockAbility(1);
+			GameObject.FindGameObjectWithTag("AbilityController").GetComponent<AbilityController>().UnlockAbility(0);
 		}
 	}
 }
