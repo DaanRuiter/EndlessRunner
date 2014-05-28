@@ -25,9 +25,10 @@ public class BulletController : MonoBehaviour {
 		if(DC.paused != true)
 		{
 			this.transform.Translate (new Vector2(0,1) * speed * Time.deltaTime);
-			if(DC.isOutOfBoundsUp(this.gameObject)){
-				Destroy(this.gameObject);
-			}
+			bool fireTrail = GameObject.FindGameObjectWithTag("Gun").GetComponent<GunSort>().fireTrail;
+		}
+		if(DC.isOutOfBoundsUp(this.gameObject)){
+			Destroy(this.gameObject, 0.1f);
 		}
 	}
 	protected virtual void OnTriggerEnter2D(Collider2D other)
@@ -47,7 +48,6 @@ public class BulletController : MonoBehaviour {
 			{
 				Destroy(this.gameObject);
 			}
-		}
 		if(other.transform.tag == "Barrier") 
 		{
 			Destroy(this.gameObject);

@@ -209,7 +209,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 13, y: 13}
+  m_Size: {x: 20, y: 20}
   m_Center: {x: 0, y: 0}
 --- !u!64 &6400000
 MeshCollider:
@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655ba70046c67314ba3e244d2cd1b651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 150
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,6 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ceba11a2e4e6440bc6c8dcc9f4c4a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 150
   bullet: {fileID: 100000, guid: 8d974cbc2ae35d84f91a5a6062814e0e, type: 2}
   bulletSpawnPoint: {fileID: 400002}
   HPBarPrefab: {fileID: 100000, guid: b320175c07eb27a41a711b52017db003, type: 2}

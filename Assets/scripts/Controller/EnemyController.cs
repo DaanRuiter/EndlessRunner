@@ -78,8 +78,6 @@ public class EnemyController : EnemyStats {
 		}
 
 		healthBar.GetComponent<Healthbar>().UpdateBar(this.health, _dmg, _crit);
-		//DEBUG ONLY \/
-		healthBar.GetComponent<Healthbar>().addText("  -  " + this.type);
 	}
 
 	public void setRangeState(bool state){
