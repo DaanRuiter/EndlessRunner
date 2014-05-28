@@ -11,17 +11,26 @@ public class DC : MonoBehaviour {
 
 	public Texture[] _bulletTextures;
 	public Texture[] _roadTextures;
+	public Texture[] theos;
+	public static bool theotime;
 
 	public static bool paused;
 	public static Texture[] roadTextures;
 
+	private int cheat = 0;
+	private ArrayList textures = new ArrayList();
 
 	void Awake(){
 		roadTextures = _roadTextures;
+		textures.Add (roadTextures);
 	}
 
 	public static void setRandomTexture(GameObject obj, Texture[] text){
 		obj.renderer.material.SetTexture("_MainTex", text[GetRandomRange(text.Length)]);
+	}
+
+	public static Texture getRandomTexture(Texture[] text){
+		return text[GetRandomRange(text.Length)];
 	}
 
 	public static Texture[] getTextureList(Texture[] text){
@@ -54,5 +63,38 @@ public class DC : MonoBehaviour {
 
 	public static bool isOutOfBoundsUp(GameObject obj){
 		return obj.transform.position.y > Camera.main.camera.transform.position.y + Camera.main.camera.orthographicSize;
+	}
+	void Update()
+	{
+		if (Input.GetKeyDown (KeyCode.T)) {
+			cheat = 1;
+		}if (Input.GetKeyDown(KeyCode.H) && cheat == 1) {
+			cheat += 1;
+		}if (Input.GetKeyDown(KeyCode.E) && cheat == 2) {
+			cheat+= 1;
+		}if (Input.GetKeyDown(KeyCode.O) && cheat == 3) {
+			ActivateCheat();
+		}
+	}
+	void ActivateCheat(){
+		theotime = true;
+		for(int i = 0; i < textures.Count; i++){
+			foreach(Texture[] text in textures){
+				for(int j = 0; j < text.Length; j++){
+					text[j] = getRandomTexture(theos);
+				}
+			}
+		}
+		GameObject[] allObjects = GameObject.FindObjectsOfType<GameObject>();
+		foreach (GameObject g in allObjects) {
+			if(g.renderer) {
+				g.renderer.material.SetTexture("_MainTex", getRandomTexture(theos));
+			}
+		}
+		GUIText[] texts = GameObject.FindObjectsOfType<GUIText> ();
+		foreach(GUIText d in texts)
+		{
+			d.text = "THEO THEO THEO THEO THEO THEO THEO THEO!!";
+		}
 	}
 }

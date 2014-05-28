@@ -418,6 +418,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
+      propertyPath: theos.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
       propertyPath: m_LocalPosition.x
       value: -13.5632095
@@ -446,6 +450,38 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
+      propertyPath: theo
+      value: 
+      objectReference: {fileID: 2800000, guid: a47d7f821f58add4da83bf5e705a71ae, type: 3}
+    - target: {fileID: 11400000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
+      propertyPath: theos.Array.data[0]
+      value: 
+      objectReference: {fileID: 2800000, guid: a47d7f821f58add4da83bf5e705a71ae, type: 3}
+    - target: {fileID: 11400000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
+      propertyPath: theos.Array.data[1]
+      value: 
+      objectReference: {fileID: 2800000, guid: 6f36c4c52bc71d048ab8f535407d95c1, type: 3}
+    - target: {fileID: 11400000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
+      propertyPath: theos.Array.data[2]
+      value: 
+      objectReference: {fileID: 2800000, guid: b551e459a4881934a99e4dad1d1450a5, type: 3}
+    - target: {fileID: 11400000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
+      propertyPath: theos.Array.data[3]
+      value: 
+      objectReference: {fileID: 2800000, guid: c280b5843c3a8f94a9f49cdbcdb72661, type: 3}
+    - target: {fileID: 11400000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
+      propertyPath: theos.Array.data[4]
+      value: 
+      objectReference: {fileID: 2800000, guid: 67a7077986fa4a24f9e70736213b8d4c, type: 3}
+    - target: {fileID: 11400000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
+      propertyPath: theos.Array.data[5]
+      value: 
+      objectReference: {fileID: 2800000, guid: e3504a53b3985e540b96b1586aaeac34, type: 3}
+    - target: {fileID: 11400000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
+      propertyPath: theos.Array.data[6]
+      value: 
+      objectReference: {fileID: 2800000, guid: b551e459a4881934a99e4dad1d1450a5, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
   m_RootGameObject: {fileID: 1595720499}
@@ -1267,10 +1303,10 @@ MonoBehaviour:
   dmg: 95
   bulletSpeed: 0
   critChance: 0
-  laserSight: 0
-  granadeLauncher: 0
-  fireTrail: 0
-  piercing: 0
+  laserSight: 1
+  granadeLauncher: 1
+  fireTrail: 1
+  piercing: 1
 --- !u!114 &1274120835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1580,6 +1616,14 @@ MonoBehaviour:
   _roadTextures:
   - {fileID: 2800000, guid: 15456e44c520f2e4ca4f6483edbcdcf1, type: 3}
   - {fileID: 2800000, guid: 7bd2b3e9e84c06941aa83c86f9b228ae, type: 3}
+  theos:
+  - {fileID: 2800000, guid: a47d7f821f58add4da83bf5e705a71ae, type: 3}
+  - {fileID: 2800000, guid: 6f36c4c52bc71d048ab8f535407d95c1, type: 3}
+  - {fileID: 2800000, guid: b551e459a4881934a99e4dad1d1450a5, type: 3}
+  - {fileID: 2800000, guid: c280b5843c3a8f94a9f49cdbcdb72661, type: 3}
+  - {fileID: 2800000, guid: 67a7077986fa4a24f9e70736213b8d4c, type: 3}
+  - {fileID: 2800000, guid: e3504a53b3985e540b96b1586aaeac34, type: 3}
+  - {fileID: 2800000, guid: b551e459a4881934a99e4dad1d1450a5, type: 3}
 --- !u!4 &1595720501
 Transform:
   m_ObjectHideFlags: 0
