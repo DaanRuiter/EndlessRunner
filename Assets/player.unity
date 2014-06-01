@@ -707,7 +707,7 @@ Transform:
   m_GameObject: {fileID: 1154184603}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 20, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 1}
+  m_LocalScale: {x: 30, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1001 &1154888124
@@ -744,6 +744,10 @@ Prefab:
     - target: {fileID: 400000, guid: c685b79f9f0fb2e4d956c63939c427ac, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c685b79f9f0fb2e4d956c63939c427ac, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c685b79f9f0fb2e4d956c63939c427ac, type: 2}
@@ -1058,7 +1062,7 @@ Transform:
   m_GameObject: {fileID: 1202009826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 1}
+  m_LocalScale: {x: 30, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &1230701083
@@ -1578,8 +1582,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletTextures: []
   _roadTextures:
-  - {fileID: 2800000, guid: 15456e44c520f2e4ca4f6483edbcdcf1, type: 3}
-  - {fileID: 2800000, guid: 7bd2b3e9e84c06941aa83c86f9b228ae, type: 3}
+  - {fileID: 2800000, guid: 0aacc696d40188647bb6ee594f3e2092, type: 3}
+  - {fileID: 2800000, guid: 0519553579216cc45bf6dd1e8631ca99, type: 3}
+  - {fileID: 2800000, guid: 8bf45b726a044ed42a40b579e646a49d, type: 3}
 --- !u!4 &1595720501
 Transform:
   m_ObjectHideFlags: 0
@@ -1625,6 +1630,10 @@ Prefab:
     - target: {fileID: 400000, guid: fec13acc134a9f546847981ca76f4cc3, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: fec13acc134a9f546847981ca76f4cc3, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fec13acc134a9f546847981ca76f4cc3, type: 2}
