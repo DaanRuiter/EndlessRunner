@@ -43,14 +43,14 @@ public class BulletController : MonoBehaviour {
 				int extradmg = (int)Random.Range(dmg*0.25f,dmg*0.50f);
 				other.gameObject.GetComponent<EnemyController>().LoseHealth(dmg + extradmg, true);
 			}
-			if(!piercing)
+			if(!piercing || other.transform.tag == "Barrier")
 			{
 				Destroy(this.gameObject);
 			}
-		if(other.transform.tag == "Barrier") 
-		{
-			Destroy(this.gameObject);
 		}
 	}
+<<<<<<< HEAD
 }
+=======
+>>>>>>> d3486ede6610618a79528c027d827d44dbfc1a23
 }

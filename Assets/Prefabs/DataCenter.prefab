@@ -40,8 +40,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletTextures: []
   _roadTextures:
-  - {fileID: 2800000, guid: 15456e44c520f2e4ca4f6483edbcdcf1, type: 3}
-  - {fileID: 2800000, guid: 7bd2b3e9e84c06941aa83c86f9b228ae, type: 3}
+  - {fileID: 2800000, guid: 0aacc696d40188647bb6ee594f3e2092, type: 3}
+  - {fileID: 2800000, guid: 0519553579216cc45bf6dd1e8631ca99, type: 3}
+  - {fileID: 2800000, guid: 8bf45b726a044ed42a40b579e646a49d, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
