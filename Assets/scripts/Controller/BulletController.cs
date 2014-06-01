@@ -11,7 +11,6 @@ public class BulletController : MonoBehaviour {
 	{
 		Destroy(gameObject, destroyTime);
 	}
-
 	public void setStats(float _speed, float _dmg, bool _piercing,int _critChance/*, Texture _bullet*/)
 	{
 		speed 	= _speed;
@@ -52,6 +51,6 @@ public class BulletController : MonoBehaviour {
 		{
 			Destroy(this.gameObject);
 		}
-
 	}
+}
 }
