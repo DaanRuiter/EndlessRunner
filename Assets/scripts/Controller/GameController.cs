@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour{
 		GameObject.FindGameObjectWithTag ("Gun").GetComponent<GunSort>().ResetGun();
 		GameObject.FindGameObjectWithTag ("Shop").GetComponent<ShopController> ().Reset ();
 		GameObject.FindGameObjectWithTag("PlayerHealthBar").GetComponent<Healthbar>().ResetBar();
+		GameObject.FindGameObjectWithTag ("PlayerController").GetComponent<PlayerStats> ().Reset ();
 		GameObject[] enemys = GameObject.FindGameObjectsWithTag ("Enemy");
 		GameObject[] bullets = GameObject.FindGameObjectsWithTag ("Bullet");
 		GameObject[] healthbars = GameObject.FindGameObjectsWithTag ("HealthBar");

@@ -3,37 +3,27 @@
 --- !u!78 &1
 TagManager:
   tags:
-<<<<<<< HEAD
-  - 
-  - Enemy
-  - EnemyRange
-  - Bullet
-  - HealthBar
-  - EnemyHPText
-  - UpgradeMenu
-=======
-  - 
-  - Bullet
   - 
   - DataCenter
   - 
-  - Enemy
   - Barrier
   - AbilityController
   - Cannon
   - Road
   - BlackScreen
   - Shop
-  - ShopInterface
   - Gun
   - PlayerController
-  - HealthBar
-  - UpgradeMenu
-  - ShopSlot
+  - Enemy
   - EnemyRange
+  - Bullet
+  - HealthBar
   - EnemyHPText
+  - ShopInterface
+  - ShopSlot
+  - UpgradeMenu
   - PlayerHealthBar
->>>>>>> d3486ede6610618a79528c027d827d44dbfc1a23
+  - PlayerHealthText
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

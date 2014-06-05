@@ -24,7 +24,7 @@ public class BulletController : MonoBehaviour {
 		if(DC.paused != true)
 		{
 			this.transform.Translate (new Vector2(0,1) * speed * Time.deltaTime);
-			bool fireTrail = GameObject.FindGameObjectWithTag("Gun").GetComponent<GunSort>().fireTrail;
+			//bool fireTrail = GameObject.FindGameObjectWithTag("Gun").GetComponent<GunSort>().fireTrail;
 		}
 		if(DC.isOutOfBoundsUp(this.gameObject)){
 			Destroy(this.gameObject, 0.1f);
@@ -40,7 +40,7 @@ public class BulletController : MonoBehaviour {
 				int extradmg = (int)Random.Range(dmg*0.10f,dmg*0.30f);
 				other.gameObject.GetComponent<EnemyController>().LoseHealth(dmg + extradmg, false);
 			} else {
-				int extradmg = (int)Random.Range(dmg*0.25f,dmg*0.50f);
+				int extradmg = (int)Random.Range(dmg*0.45f,dmg*0.75f);
 				other.gameObject.GetComponent<EnemyController>().LoseHealth(dmg + extradmg, true);
 			}
 			if(!piercing || other.transform.tag == "Barrier")
@@ -49,8 +49,4 @@ public class BulletController : MonoBehaviour {
 			}
 		}
 	}
-<<<<<<< HEAD
-}
-=======
->>>>>>> d3486ede6610618a79528c027d827d44dbfc1a23
 }

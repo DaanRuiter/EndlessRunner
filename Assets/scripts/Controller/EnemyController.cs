@@ -53,6 +53,7 @@ public class EnemyController : EnemyStats {
 
 			healthBar.transform.position = barPos;
 			if(canShoot && inRange){
+				shootCooldown = 0.35f + (PlayerStats.level*0.01f);
 				shootTimer -= shootCooldown;
 				if(shootTimer <= 0){
 					Shoot();

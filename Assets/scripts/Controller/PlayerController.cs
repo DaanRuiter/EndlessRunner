@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 	public float movementSpeed;
+	public Transform tank;
 	void Update () 
 	{
 		if(DC.paused != true)
@@ -14,6 +15,9 @@ public class PlayerController : MonoBehaviour {
 			moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection *= movementSpeed;
 			controller.Move(moveDirection * Time.deltaTime);
+
+			this.transform.position = tank.position;
+			tank.transform.localPosition = new Vector3(0,0,0);
 		}
 	}
 	public void ResetPos()

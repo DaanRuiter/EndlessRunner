@@ -5,6 +5,7 @@ public class PlayerStats : MonoBehaviour {
 	public static int level;
 
 	public GameObject prefab_healthBar;
+	public GameObject levelAnim;
 
 	public float gold;
 	public float health;
@@ -31,7 +32,13 @@ public class PlayerStats : MonoBehaviour {
 		healthBar.tag = "PlayerHealthBar";
 		healthBar.GetComponent<Healthbar>().SetTextTag("PlayerHealthText");
 	}
-
+	public void Reset () {
+		health = 100;
+		gold = 0;
+		exp = 0;
+		level = 1;
+		expTillLevel = 500;
+	}
 	public void LoseHealth(float _dmg)
 	{
 		health -= _dmg;
@@ -75,10 +82,13 @@ public class PlayerStats : MonoBehaviour {
 		exp += _exp;
 		if (expTillLevel <= exp) 
 		{
-			expTillLevel += expTillLevel * 0.75f;
+			expTillLevel += expTillLevel * 0.25f;
 			level += 1;
 			exp = 0;
 			statPoints += 1;
+			Quaternion rot = new Quaternion();
+			GameObject levelup = Instantiate(levelAnim,this.transform.position,rot) as GameObject;
+			levelup.transform.parent = this.transform;
 		}
 	}
 }

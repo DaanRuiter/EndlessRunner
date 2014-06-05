@@ -18,8 +18,8 @@ public class MakeGuns : MonoBehaviour {
 		{
 		case 1:
 			randomSort = "Rapid";
-			speedStat += 5;
-			dmgStat -= 20;
+			speedStat += 5 + (int)(PlayerStats.level*0.5f);
+			dmgStat -= 35 - (int)(PlayerStats.level*0.5f);
 			bSpeed += 10;
 			piercing = false;
 			critChance = Random.Range(10,21);
@@ -27,8 +27,8 @@ public class MakeGuns : MonoBehaviour {
 			break;
 		case 2:
 			randomSort = "Shotgun";
-			speedStat -= 45;
-			dmgStat += 4;
+			speedStat -= 45 - (int)(PlayerStats.level*0.5f);
+			dmgStat += 4 + (int)(PlayerStats.level*0.5f);
 			bSpeed += 5;
 			piercing = false;
 			critChance = Random.Range(20,41);
@@ -36,8 +36,8 @@ public class MakeGuns : MonoBehaviour {
 			break;
 		case 3:
 			randomSort = "Sniper";
-			speedStat -= 55;
-			dmgStat += 45;
+			speedStat -= 55 - (int)(PlayerStats.level*0.5f);
+			dmgStat += 45 + (int)(PlayerStats.level*0.5f);
 			bSpeed += 20;
 			piercing = true;
 			critChance = Random.Range(30,61);

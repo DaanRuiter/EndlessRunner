@@ -15,5 +15,6 @@ public class Stats : MonoBehaviour {
 		guiText.text += "LEVEL : " + player.GetComponent<PlayerStats>().GetLevel() + "\n";
 		guiText.text += "XP : " + player.GetComponent<PlayerStats>().GetXP() + "\n";
 		guiText.text += "XP NEEDED: " + (int) player.GetComponent<PlayerStats>().GetXPTillLevel() + "\n";
+		guiText.text += "STAT POINTS: " + PlayerStats.statPoints + "\n";
 	}
 }

@@ -49,5 +49,8 @@ public class GunSort : MonoBehaviour {
 		bulletSpeed 	= 20;
 		piercing 		= false;
 		critChance 		= 10;
+		fireTrail 		= false;
+		granadeLauncher = false;
+		laserSight 		= false;
 	}
 }

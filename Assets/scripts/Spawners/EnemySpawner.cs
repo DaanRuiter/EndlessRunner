@@ -34,14 +34,17 @@ public class EnemySpawner : MonoBehaviour {
 	}
 
 	private void SpawnEnemy(){
-		spawnTimer = 12.5f;
-		spawnPoint.x = getRandomX();
-		spawnPoint.y = getRandomY();
-		GameObject enem = Instantiate(enemies[DC.GetRandomRange(enemies.Length)], spawnPoint, Quaternion.identity) as GameObject;
-		GameController.enemies.Add(enem);
-		enemySpawnable = true;
-		if(enem.GetComponent<EnemyController>().GetEnemType().Equals("stationary")){
-			enem.GetComponent<StationaryEnemy>().SetGoToPos(DC.LEVEL_Y_MIN - Random.Range (12, 18));
+		spawnTimer = 12.5f + PlayerStats.level*3;
+		for(int i = 0; i < PlayerStats.level; i++){
+			spawnPoint.x = getRandomX();
+			spawnPoint.y = getRandomY();
+			GameObject enem = Instantiate(enemies[DC.GetRandomRange(enemies.Length)], spawnPoint, Quaternion.identity) as GameObject;
+			enem.transform.parent = this.transform;
+			GameController.enemies.Add(enem);
+			enemySpawnable = true;
+			if(enem.GetComponent<EnemyController>().GetEnemType().Equals("stationary")){
+				enem.GetComponent<StationaryEnemy>().SetGoToPos(DC.LEVEL_Y_MIN - Random.Range (12, 18));
+			}
 		}
 	}
 }

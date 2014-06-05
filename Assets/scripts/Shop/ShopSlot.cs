@@ -13,6 +13,10 @@ public class ShopSlot : MonoBehaviour {
 	private bool bought		  = false;
 	public GUIText statsText;
 
+	public Texture rapid;
+	public Texture shotgun;
+	public Texture sniper;
+
 	void Start()
 	{
 		gold = GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats> ().gold;
@@ -31,7 +35,15 @@ public class ShopSlot : MonoBehaviour {
 	}
 	private void SetTexture()
 	{
-		//blablalbla
+		if(weaponSort == "Rapid")
+		{
+			DC.SetTexture (rapid, this.gameObject);
+		} else if(weaponSort == "Shotgun")
+		{
+			DC.SetTexture (shotgun, this.gameObject);
+		} else {
+			DC.SetTexture (sniper, this.gameObject);
+		}
 	}
 	void OnMouseOver()
 	{

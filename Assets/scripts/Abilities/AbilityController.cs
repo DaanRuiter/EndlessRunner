@@ -7,8 +7,8 @@ public class AbilityController : MonoBehaviour {
 	private float coolDown = 5f;
 	private bool[] unlocked = new bool[2];
 	void Start () {
-		unlocked [0] = true;
-		unlocked [1] = true;
+		unlocked [0] = false;
+		unlocked [1] = false;
 		}
 	void Update () 
 	{
