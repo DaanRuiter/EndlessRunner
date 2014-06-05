@@ -38,11 +38,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a843d696200c1b34fa76e149cd75b196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletTextures: []
+  _enemies:
+  - {fileID: 100000, guid: f66d614b9febaee45bbcec7ffb7c1513, type: 2}
+  - {fileID: 100006, guid: 1f81a70df55a66448b3a92a737a87b58, type: 2}
+  - {fileID: 100006, guid: 9b223f5a070093a40b5d7018fe8309fd, type: 2}
+  _props: []
   _roadTextures:
   - {fileID: 2800000, guid: 0aacc696d40188647bb6ee594f3e2092, type: 3}
   - {fileID: 2800000, guid: 0519553579216cc45bf6dd1e8631ca99, type: 3}
   - {fileID: 2800000, guid: 8bf45b726a044ed42a40b579e646a49d, type: 3}
+  theos:
+  - {fileID: 2800000, guid: a47d7f821f58add4da83bf5e705a71ae, type: 3}
+  - {fileID: 2800000, guid: 6f36c4c52bc71d048ab8f535407d95c1, type: 3}
+  - {fileID: 2800000, guid: b551e459a4881934a99e4dad1d1450a5, type: 3}
+  - {fileID: 2800000, guid: c280b5843c3a8f94a9f49cdbcdb72661, type: 3}
+  - {fileID: 2800000, guid: 67a7077986fa4a24f9e70736213b8d4c, type: 3}
+  - {fileID: 2800000, guid: e3504a53b3985e540b96b1586aaeac34, type: 3}
+  - {fileID: 2800000, guid: b551e459a4881934a99e4dad1d1450a5, type: 3}
+  clearOnStart: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

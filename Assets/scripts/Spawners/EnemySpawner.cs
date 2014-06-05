@@ -2,9 +2,6 @@
 using System.Collections;
 
 public class EnemySpawner : MonoBehaviour {
-
-	public GameObject[] enemies;
-
 	private bool enemySpawnable;
 	private float spawnTimer;
 	private Vector2 spawnPoint;
@@ -37,7 +34,8 @@ public class EnemySpawner : MonoBehaviour {
 		spawnTimer = 12.5f;
 		spawnPoint.x = getRandomX();
 		spawnPoint.y = getRandomY();
-		GameObject enem = Instantiate(enemies[DC.GetRandomRange(enemies.Length)], spawnPoint, Quaternion.identity) as GameObject;
+		int t = DC.GetRandomRange(DC.enemies.Length);
+		GameObject enem = Instantiate(DC.enemies[t], spawnPoint, Quaternion.identity) as GameObject;
 		GameController.enemies.Add(enem);
 		enemySpawnable = true;
 		if(enem.GetComponent<EnemyController>().GetEnemType().Equals("stationary")){

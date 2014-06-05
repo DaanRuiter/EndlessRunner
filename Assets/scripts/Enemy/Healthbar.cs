@@ -11,6 +11,7 @@ public class Healthbar : MonoBehaviour {
 	private TextMesh healthText;
 	private TextMesh dmgText;
 	private Vector3 HPPos;
+	private float xOffset;
 	private Vector3 dmgPos;
 	private bool follow;
 	private Vector3 newSize;
@@ -49,7 +50,7 @@ public class Healthbar : MonoBehaviour {
 
 	private void Update(){
 		if(follow){
-			HPPos.x = this.transform.position.x - 1.2f;
+			HPPos.x = this.transform.position.x - 1.2f + xOffset;
 			HPPos.y = this.transform.position.y + 0.3f;
 			HPPos.z = this.transform.position.z;
 			healthText.transform.position = HPPos;
@@ -76,17 +77,12 @@ public class Healthbar : MonoBehaviour {
 		newSize.y = this.transform.localScale.y;
 		newSize.z = this.transform.localScale.z;
 
+		xOffset = (maxWidth - nW) / 2;
+
 		this.gameObject.transform.localScale = newSize;
 
 		dmgText = Instantiate(healthPrefab, dmgPos, transform.rotation) as TextMesh;
 		InitDmgText(_dmg, _crit);
-
-		if(this.transform.lossyScale.x < (maxWidth / 3) * 2 ){
-			this.renderer.material.color = Color.yellow;
-		}
-		if(this.transform.lossyScale.x < (maxHeight / 3) * 1 ){
-			this.renderer.material.color = Color.red;
-		}
 
 		if(this.transform.lossyScale.x < 0){
 			newSize.x = 0;
@@ -106,6 +102,10 @@ public class Healthbar : MonoBehaviour {
 
 	public void SetTextTag(string _tag){
 		healthText.tag = _tag;
+	}
+
+	public float GetXOffset(){
+		return xOffset;
 	}
 
 	public void ResetBar(){

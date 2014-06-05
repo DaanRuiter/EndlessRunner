@@ -13,7 +13,7 @@ public class StationaryEnemy : EnemyController {
 		if(DC.paused == false)
 		{
 			if(alive){
-				if(this.type == "stationary" && this.transform.position.y > goToPos){
+				if(this.transform.position.y > goToPos){
 					pos = transform.position;
 					pos.y -= speed * Time.deltaTime;
 					transform.position = pos;
