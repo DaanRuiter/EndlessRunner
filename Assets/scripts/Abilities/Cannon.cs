@@ -27,6 +27,7 @@ public class Cannon : MonoBehaviour {
 				Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
 				Vector3 dir = Input.mousePosition - pos;
 				float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+				angle -= 90;
 				transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 				if (Input.GetMouseButton (1) && haveBullet) 
 				{
