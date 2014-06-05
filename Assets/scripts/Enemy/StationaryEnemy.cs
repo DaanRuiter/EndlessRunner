@@ -13,6 +13,7 @@ public class StationaryEnemy : EnemyController {
 		if(DC.paused == false)
 		{
 			if(alive){
+<<<<<<< HEAD
 				if(this.transform.position.y > goToPos && justSpawned){
 					pos = transform.position;
 					pos.y -= speed * Time.deltaTime;
@@ -22,6 +23,9 @@ public class StationaryEnemy : EnemyController {
 				}
 				if(!justSpawned)
 				{
+=======
+				if(this.transform.position.y > goToPos){
+>>>>>>> e00675acea4e3e574c3bedb451b73244e9469a02
 					pos = transform.position;
 					pos.y -= speed * Time.deltaTime;
 					transform.position = pos;

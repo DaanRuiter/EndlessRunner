@@ -19,6 +19,7 @@ public class EnemyController : EnemyStats {
 	//types (no caps):
 	//moving
 	//stationary
+	//chasing
 
 	private float shootTimer;
 
@@ -44,11 +45,13 @@ public class EnemyController : EnemyStats {
 	
 	protected virtual void Update () {
 		if(DC.paused != true){
-			Vector3 dir = player.transform.position - this.transform.position;
-			float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-			transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+			if(this.type != "chasing"){
+				Vector3 dir = player.transform.position - this.transform.position;
+				float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+				transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+			}
 
-			barPos.x = this.transform.position.x;
+			barPos.x = this.transform.position.x - healthBar.GetComponent<Healthbar>().GetXOffset();
 			barPos.y = this.transform.position.y + 1f;
 
 			healthBar.transform.position = barPos;

@@ -4,29 +4,52 @@ using System.Collections;
 public class DC : MonoBehaviour {
 	//custom datacenter
 
+
+	public GameObject[] _enemies;
+	public GameObject[] _props;
+	public Texture[] _roadTextures;
+	public Texture[] theos;
+	public bool clearOnStart;
+
+	public static bool theotime;
+	public static bool paused;
 	public static float LEVEL_X_MIN = -10;
 	public static float LEVEL_X_MAX = 10;
 	public static float LEVEL_Y_MIN = 20;
 	public static float LEVEL_Y_MAX = 22;
 
-	public Texture[] _bulletTextures;
-	public Texture[] _roadTextures;
-	public Texture[] theos;
-	public static bool theotime;
-
-	public static bool paused;
 	public static Texture[] roadTextures;
+	public static GameObject[] enemies;
+	public static GameObject[] props;
 
-	private int cheat = 0;
+	private int cheat;
 	private ArrayList textures = new ArrayList();
 
 	void Awake(){
+		//transfer textures from instpector to reference
 		roadTextures = _roadTextures;
+
+		//transfer Gameobjects from instpector to reference
+		enemies = _enemies;
+		props = _props;
+
+		//add Textures to the texture arrays for THEO MODE;
 		textures.Add (roadTextures);
+
+		//clear inspector texture arrays
+		if(clearOnStart){
+			_roadTextures = null;
+			_enemies = null;
+			_props = null;
+		}
 	}
 
 	public static void setRandomTexture(GameObject obj, Texture[] text){
 		obj.renderer.material.SetTexture("_MainTex", text[GetRandomRange(text.Length)]);
+	}
+
+	public static void setTexture(GameObject obj, Texture text){
+		obj.renderer.material.SetTexture("_MainTex", text);
 	}
 
 	public static Texture getRandomTexture(Texture[] text){
@@ -76,6 +99,8 @@ public class DC : MonoBehaviour {
 			ActivateCheat();
 		}
 	}
+
+	//theo
 	void ActivateCheat(){
 		theotime = true;
 		for(int i = 0; i < textures.Count; i++){
