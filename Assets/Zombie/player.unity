@@ -1905,7 +1905,7 @@ Transform:
   m_GameObject: {fileID: 1230701083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.25398445, y: -13.6554146, z: -.100000001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 7.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!61 &1230701089
@@ -2953,6 +2953,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: f66d614b9febaee45bbcec7ffb7c1513, type: 2}
   - {fileID: 100006, guid: 1f81a70df55a66448b3a92a737a87b58, type: 2}
   - {fileID: 100006, guid: 9b223f5a070093a40b5d7018fe8309fd, type: 2}
+  - {fileID: 100006, guid: 675c8786d0775fd4c9da3249dfe58968, type: 2}
   _props:
   - {fileID: 100000, guid: f547dbc6c6fec0b43b87e91ebba7348f, type: 2}
   - {fileID: 100000, guid: 16898fc747bc1674a8292cd2ed776221, type: 2}
@@ -2995,6 +2996,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
       propertyPath: _props.Array.size
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
+      propertyPath: _enemies.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3052,6 +3057,10 @@ Prefab:
       propertyPath: _props.Array.data[6]
       value: 
       objectReference: {fileID: 100000, guid: 0746aecd7d7127c45be0215d1f9168e3, type: 2}
+    - target: {fileID: 11400000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
+      propertyPath: _enemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 100006, guid: 675c8786d0775fd4c9da3249dfe58968, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ff2e5a29c1480e4d86619d7b44fb0c1, type: 2}
   m_RootGameObject: {fileID: 1595720499}

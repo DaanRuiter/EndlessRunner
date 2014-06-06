@@ -13,9 +13,7 @@ public class ShopSlot : MonoBehaviour {
 	private bool bought		  = false;
 	public GUIText statsText;
 
-	public Texture rapid;
-	public Texture shotgun;
-	public Texture sniper;
+	public Texture[] buttonTextures;
 
 	void Start()
 	{
@@ -37,12 +35,12 @@ public class ShopSlot : MonoBehaviour {
 	{
 		if(weaponSort == "Rapid")
 		{
-			DC.SetTexture (rapid, this.gameObject);
+			DC.SetTexture (buttonTextures[0], this.gameObject);
 		} else if(weaponSort == "Shotgun")
 		{
-			DC.SetTexture (shotgun, this.gameObject);
+			DC.SetTexture (buttonTextures[1], this.gameObject);
 		} else {
-			DC.SetTexture (sniper, this.gameObject);
+			DC.SetTexture (buttonTextures[2], this.gameObject);
 		}
 	}
 	void OnMouseOver()
@@ -66,8 +64,15 @@ public class ShopSlot : MonoBehaviour {
 	{
 		if(!bought){
 			statsText.text = "Stats" + "\n" + "Weapon: " + weaponSort + "\n" + "Damage: " + dmg + "\n" + "Speed: " + speed + "\n" + "CritChance: " + critChance + "\n" + "Price: " + price;
-		} else {
+		} else if(weaponSort == "Rapid"){
 			statsText.text = "Out of stock!";
+			DC.setTexture(this.gameObject, buttonTextures[3]);
+		} else if(weaponSort == "Shotgun"){
+			statsText.text = "Out of stock!";
+			DC.setTexture(this.gameObject, buttonTextures[4]);
+		}else {
+			statsText.text = "Out of stock!";
+			DC.setTexture(this.gameObject, buttonTextures[5]);
 		}
 	}
 }

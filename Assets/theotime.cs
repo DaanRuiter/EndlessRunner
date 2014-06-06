@@ -8,6 +8,7 @@ public class theotime : MonoBehaviour {
 		if(DC.theotime){
 			Texture[] theos = GameObject.FindGameObjectWithTag("DataCenter").GetComponent<DC>().theos;
 			this.renderer.material.SetTexture("_MainTex", DC.getRandomTexture(theos));
+
 		}
 	}
 }

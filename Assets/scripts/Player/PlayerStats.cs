@@ -38,15 +38,6 @@ public class PlayerStats : MonoBehaviour {
 		level = 1;
 		expTillLevel = 500;
 	}
-
-<<<<<<< HEAD
-	void Update(){
-		HPPos.x = this.transform.position.x - 0f;
-		HPPos.y = this.transform.position.y + -1f;
-		healthBar.transform.position = HPPos;
-	}
-=======
->>>>>>> b81247b42bf0f75a05fbe4d784c33a0dcd45c0e2
 	public void LoseHealth(float _dmg)
 	{
 		health -= _dmg;

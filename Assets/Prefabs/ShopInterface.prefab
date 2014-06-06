@@ -326,9 +326,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsText: {fileID: 13200000}
-  rapid: {fileID: 2800000, guid: 6387f2af0f926fa4f92b3922c43c8324, type: 3}
-  shotgun: {fileID: 2800000, guid: 68c0994063b50c841aa3e48ecd3de003, type: 3}
-  sniper: {fileID: 2800000, guid: c8b933db64aec9e4f99a07c4c219da3d, type: 3}
+  buttonTextures:
+  - {fileID: 2800000, guid: 6387f2af0f926fa4f92b3922c43c8324, type: 3}
+  - {fileID: 2800000, guid: 68c0994063b50c841aa3e48ecd3de003, type: 3}
+  - {fileID: 2800000, guid: c8b933db64aec9e4f99a07c4c219da3d, type: 3}
+  - {fileID: 2800000, guid: 9822aeb3cc5bf044dac6d28b0ac45586, type: 3}
+  - {fileID: 2800000, guid: 1b4ad0649ceba3c4e8a6e37bcda7e1bc, type: 3}
+  - {fileID: 2800000, guid: 7228b8b84731d7242bde6c578c9fdf8e, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -341,9 +345,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsText: {fileID: 13200000}
-  rapid: {fileID: 2800000, guid: 6387f2af0f926fa4f92b3922c43c8324, type: 3}
-  shotgun: {fileID: 2800000, guid: 68c0994063b50c841aa3e48ecd3de003, type: 3}
-  sniper: {fileID: 2800000, guid: c8b933db64aec9e4f99a07c4c219da3d, type: 3}
+  buttonTextures:
+  - {fileID: 2800000, guid: 6387f2af0f926fa4f92b3922c43c8324, type: 3}
+  - {fileID: 2800000, guid: 68c0994063b50c841aa3e48ecd3de003, type: 3}
+  - {fileID: 2800000, guid: c8b933db64aec9e4f99a07c4c219da3d, type: 3}
+  - {fileID: 2800000, guid: 9822aeb3cc5bf044dac6d28b0ac45586, type: 3}
+  - {fileID: 2800000, guid: 1b4ad0649ceba3c4e8a6e37bcda7e1bc, type: 3}
+  - {fileID: 2800000, guid: 7228b8b84731d7242bde6c578c9fdf8e, type: 3}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -356,9 +364,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsText: {fileID: 13200000}
-  rapid: {fileID: 2800000, guid: 6387f2af0f926fa4f92b3922c43c8324, type: 3}
-  shotgun: {fileID: 2800000, guid: 68c0994063b50c841aa3e48ecd3de003, type: 3}
-  sniper: {fileID: 2800000, guid: c8b933db64aec9e4f99a07c4c219da3d, type: 3}
+  buttonTextures:
+  - {fileID: 2800000, guid: 6387f2af0f926fa4f92b3922c43c8324, type: 3}
+  - {fileID: 2800000, guid: 68c0994063b50c841aa3e48ecd3de003, type: 3}
+  - {fileID: 2800000, guid: c8b933db64aec9e4f99a07c4c219da3d, type: 3}
+  - {fileID: 2800000, guid: 9822aeb3cc5bf044dac6d28b0ac45586, type: 3}
+  - {fileID: 2800000, guid: 1b4ad0649ceba3c4e8a6e37bcda7e1bc, type: 3}
+  - {fileID: 2800000, guid: 7228b8b84731d7242bde6c578c9fdf8e, type: 3}
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1

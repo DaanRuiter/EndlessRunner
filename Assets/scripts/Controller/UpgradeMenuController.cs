@@ -8,7 +8,8 @@ public class UpgradeMenuController : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.K) && !DC.paused)
 		{
 			DC.paused = true;
-			Instantiate(upgradeMenu,this.transform.position,this.transform.rotation);
+			Vector3 spawnPos = new Vector3(0,0,-5);
+			Instantiate(upgradeMenu,spawnPos,this.transform.rotation);
 		}
 	}
 }

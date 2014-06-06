@@ -29,12 +29,15 @@ public class RoadScroll : MonoBehaviour {
 				}
 			}
 			foreach(GameObject prop in GameController.props){
+				if(prop != null)
+				{
 				Vector2 pos = prop.transform.position;
 				pos.y -= scrollSpeed;
 				prop.transform.position = pos;
 				if(DC.isOutOfBounds(prop.gameObject)){
 					GameController.props.Remove(prop);
 					Destroy(prop, 1f);
+					}
 				}
 			}
 		}
