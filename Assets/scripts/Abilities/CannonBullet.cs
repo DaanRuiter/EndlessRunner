@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class CannonBullet : BulletController {
+
+	//Menno
+
 	private float bombRadius = 7.5f;
 	protected float bombDamage = 700f;
 	public GameObject explosion;

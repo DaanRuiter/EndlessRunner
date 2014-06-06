@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class AbilityController : MonoBehaviour {
+
+	//Menno
+
 	private bool cdAbility01 = false; 
 	private bool cdAbility02 = false;
 	private float coolDown = 5f;

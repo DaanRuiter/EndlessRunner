@@ -7,5 +7,9 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Zombie/Menu.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Zombie/player.unity
+  - enabled: 1
+    path: Assets/MainMenu.unity
+  - enabled: 1
+    path: Assets/GameScene.unity

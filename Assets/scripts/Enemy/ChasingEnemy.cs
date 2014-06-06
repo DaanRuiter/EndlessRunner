@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class ChasingEnemy : EnemyController {
+
+	//Daan
+
 	private Transform target;	
 
 	private bool going;

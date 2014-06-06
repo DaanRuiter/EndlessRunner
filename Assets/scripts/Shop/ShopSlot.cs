@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class ShopSlot : MonoBehaviour {
+
+	//Menno
+
 	private string weaponSort = "";
 	private float price		  = 0;
 	private int speed		  = 0;

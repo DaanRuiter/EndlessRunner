@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class StationaryEnemy : EnemyController {
+
+	//Daan
+
 	private float goToPos;
 	private bool justSpawned = true;
 	public void SetGoToPos(float pos){

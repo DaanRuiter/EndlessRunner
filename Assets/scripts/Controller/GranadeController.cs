@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class GranadeController : CannonBullet {
+
+	//Menno
+
 	float explodeTime = 2f;
 	bool moving = true;
 	void Start()

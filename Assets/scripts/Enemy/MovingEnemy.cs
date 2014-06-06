@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class MovingEnemy : EnemyController {
+
+	//Daan
+
 	override protected void Update () {
 		base.Update ();
 		if(DC.paused == false)

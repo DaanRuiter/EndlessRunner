@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class ShopController : MonoBehaviour {
+
+	//Menno
+
 	private bool inToStage 			= false;
 	private bool backInvokeAble 	= true;
 	private bool startInvokeAble 	= true;

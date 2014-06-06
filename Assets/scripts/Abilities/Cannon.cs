@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class Cannon : MonoBehaviour {
+
+	//Menno
+
 	private bool aiming = false;
 	public GameObject cannonBullet;
 	public Transform aimPoint;

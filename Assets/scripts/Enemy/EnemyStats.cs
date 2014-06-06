@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class EnemyStats : MonoBehaviour {
+
+	//Daan
+
 	protected const float MAX_HEALTH = 100f;
 	public float health = 150f;
 	protected float gold = 250f;
