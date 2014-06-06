@@ -98,7 +98,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0857884809, y: .0625, z: 1}
+  m_LocalPosition: {x: .0280000009, y: .0480000004, z: 1}
   m_LocalScale: {x: .100000001, y: .125, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
@@ -109,8 +109,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.310736597, z: -2}
-  m_LocalScale: {x: .75, y: .200000003, z: 1}
+  m_LocalPosition: {x: -.303524882, y: -.310736626, z: -2}
+  m_LocalScale: {x: .300000012, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
 --- !u!4 &400004
@@ -120,8 +120,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.0186442733, z: -2}
-  m_LocalScale: {x: .75, y: .200000003, z: 1}
+  m_LocalPosition: {x: -.303525001, y: -.0611377135, z: -2}
+  m_LocalScale: {x: .300000012, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
 --- !u!4 &400006
@@ -131,8 +131,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .279662967, z: -2}
-  m_LocalScale: {x: .75, y: .200000003, z: 1}
+  m_LocalPosition: {x: -.303525478, y: .206817135, z: -2}
+  m_LocalScale: {x: .300000012, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
 --- !u!4 &400008
@@ -142,8 +142,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.4542732, y: .361448288, z: -1}
-  m_LocalScale: {x: 10, y: 8, z: 1}
+  m_LocalPosition: {x: -.946260691, y: -.367379665, z: -2}
+  m_LocalScale: {x: 20, y: 15, z: 1}
   m_Children:
   - {fileID: 400000}
   - {fileID: 400006}
@@ -326,9 +326,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsText: {fileID: 13200000}
-  rapid: {fileID: 2800000, guid: bcd867d3ca5333249bbc2d64be13bfe4, type: 3}
-  shotgun: {fileID: 2800000, guid: 17743b3b578093e43bde4f221ad3aec3, type: 3}
-  sniper: {fileID: 2800000, guid: 1cd03e673c8840e4c8bb4cc21f0984d5, type: 3}
+  rapid: {fileID: 2800000, guid: 6387f2af0f926fa4f92b3922c43c8324, type: 3}
+  shotgun: {fileID: 2800000, guid: 68c0994063b50c841aa3e48ecd3de003, type: 3}
+  sniper: {fileID: 2800000, guid: c8b933db64aec9e4f99a07c4c219da3d, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -341,9 +341,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsText: {fileID: 13200000}
-  rapid: {fileID: 2800000, guid: bcd867d3ca5333249bbc2d64be13bfe4, type: 3}
-  shotgun: {fileID: 2800000, guid: 17743b3b578093e43bde4f221ad3aec3, type: 3}
-  sniper: {fileID: 2800000, guid: 1cd03e673c8840e4c8bb4cc21f0984d5, type: 3}
+  rapid: {fileID: 2800000, guid: 6387f2af0f926fa4f92b3922c43c8324, type: 3}
+  shotgun: {fileID: 2800000, guid: 68c0994063b50c841aa3e48ecd3de003, type: 3}
+  sniper: {fileID: 2800000, guid: c8b933db64aec9e4f99a07c4c219da3d, type: 3}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -356,9 +356,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statsText: {fileID: 13200000}
-  rapid: {fileID: 2800000, guid: bcd867d3ca5333249bbc2d64be13bfe4, type: 3}
-  shotgun: {fileID: 2800000, guid: 17743b3b578093e43bde4f221ad3aec3, type: 3}
-  sniper: {fileID: 2800000, guid: 1cd03e673c8840e4c8bb4cc21f0984d5, type: 3}
+  rapid: {fileID: 2800000, guid: 6387f2af0f926fa4f92b3922c43c8324, type: 3}
+  shotgun: {fileID: 2800000, guid: 68c0994063b50c841aa3e48ecd3de003, type: 3}
+  sniper: {fileID: 2800000, guid: c8b933db64aec9e4f99a07c4c219da3d, type: 3}
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1
@@ -370,12 +370,12 @@ GUIText:
   m_Text: Stats,
   m_Anchor: 0
   m_Alignment: 0
-  m_PixelOffset: {x: -5.8499999, y: 97.8499985}
+  m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Material: {fileID: 0}
-  m_FontSize: 0
+  m_FontSize: 24
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2

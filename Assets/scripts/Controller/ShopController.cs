@@ -76,7 +76,7 @@ public class ShopController : MonoBehaviour {
 			if(Input.GetKeyDown(KeyCode.E) && activeState && !DC.paused)
 			{
 				DC.paused = true;
-				Vector2 spawnPos = new Vector2(0,0);
+				Vector3 spawnPos = new Vector3(0,0,-5);
 				Instantiate(shopInterface,spawnPos,this.transform.rotation);
 				SetGun();
 			} else if(Input.GetKeyDown(KeyCode.E) && activeState && DC.paused)

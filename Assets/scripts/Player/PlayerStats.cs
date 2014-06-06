@@ -31,7 +31,6 @@ public class PlayerStats : MonoBehaviour {
 		healthBar.tag = "PlayerHealthBar";
 		healthBar.GetComponent<Healthbar>().SetTextTag("PlayerHealthText");
 	}
-<<<<<<< HEAD
 	public void Reset () {
 		health = 100;
 		gold = 0;
@@ -39,15 +38,12 @@ public class PlayerStats : MonoBehaviour {
 		level = 1;
 		expTillLevel = 500;
 	}
-=======
 
 	void Update(){
 		HPPos.x = this.transform.position.x - 0f;
 		HPPos.y = this.transform.position.y + -1f;
 		healthBar.transform.position = HPPos;
 	}
-
->>>>>>> e00675acea4e3e574c3bedb451b73244e9469a02
 	public void LoseHealth(float _dmg)
 	{
 		health -= _dmg;
