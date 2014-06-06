@@ -1,0 +1,1268 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+SceneSettings:
+  m_ObjectHideFlags: 0
+  m_PVSData: 
+  m_PVSObjectsArray: []
+  m_PVSPortalsArray: []
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: .25
+    backfaceThreshold: 100
+--- !u!104 &2
+RenderSettings:
+  m_Fog: 0
+  m_FogColor: {r: .5, g: .5, b: .5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: .00999999978
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: .5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 0}
+  m_ObjectHideFlags: 0
+--- !u!127 &3
+LevelGameManager:
+  m_ObjectHideFlags: 0
+--- !u!157 &4
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  m_LightProbes: {fileID: 0}
+  m_Lightmaps: []
+  m_LightmapsMode: 1
+  m_BakedColorSpace: 0
+  m_UseDualLightmapsInForward: 0
+  m_LightmapEditorSettings:
+    m_Resolution: 50
+    m_LastUsedResolution: 0
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_BounceBoost: 1
+    m_BounceIntensity: 1
+    m_SkyLightColor: {r: .860000014, g: .930000007, b: 1, a: 1}
+    m_SkyLightIntensity: 0
+    m_Quality: 0
+    m_Bounces: 1
+    m_FinalGatherRays: 1000
+    m_FinalGatherContrastThreshold: .0500000007
+    m_FinalGatherGradientThreshold: 0
+    m_FinalGatherInterpolationPoints: 15
+    m_AOAmount: 0
+    m_AOMaxDistance: .100000001
+    m_AOContrast: 1
+    m_LODSurfaceMappingDistance: 1
+    m_Padding: 0
+    m_TextureCompression: 0
+    m_LockAtlas: 0
+--- !u!196 &5
+NavMeshSettings:
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    agentRadius: .5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: .400000006
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    accuratePlacement: 0
+    minRegionArea: 2
+    widthInaccuracy: 16.666666
+    heightInaccuracy: 10
+  m_NavMesh: {fileID: 0}
+--- !u!1 &64739055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 64739057}
+  - 212: {fileID: 64739056}
+  m_Layer: 0
+  m_Name: zombie ding stuk_9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &64739056
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200002, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 64739055}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300018, guid: 743b51f8e24c3eb44837b15574fed26a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &64739057
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 64739055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.66989136, y: -7.0140686, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2015188083}
+--- !u!1 &75991305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 75991306}
+  m_Layer: 0
+  m_Name: body
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &75991306
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 75991305}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1104384194}
+  m_Father: {fileID: 1740309751}
+--- !u!1 &123892068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100006, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 123892069}
+  - 212: {fileID: 123892070}
+  m_Layer: 0
+  m_Name: zombie ding stuk_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &123892069
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400006, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 123892068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.80737305, y: -2.7507019, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1523820672}
+--- !u!212 &123892070
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200004, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 123892068}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300006, guid: 743b51f8e24c3eb44837b15574fed26a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &246076853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100008, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 246076854}
+  m_Layer: 0
+  m_Name: right hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &246076854
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400008, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 246076853}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.39804077, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 429997987}
+  m_Father: {fileID: 1740309751}
+--- !u!1 &365824830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100010, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 365824831}
+  m_Layer: 0
+  m_Name: right upper arm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &365824831
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400010, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 365824830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: .599374235, z: 1}
+  m_Children:
+  - {fileID: 1470537689}
+  m_Father: {fileID: 1740309751}
+--- !u!1 &429997986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100012, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 429997987}
+  - 212: {fileID: 429997988}
+  m_Layer: 0
+  m_Name: zombie ding stuk_8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &429997987
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400012, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 429997986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.76037598, y: -10.4985046, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 246076854}
+--- !u!212 &429997988
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200006, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 429997986}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300016, guid: 743b51f8e24c3eb44837b15574fed26a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &539483963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100014, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 539483964}
+  m_Layer: 0
+  m_Name: left hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &539483964
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400014, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 539483963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.39804077, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1329601433}
+  m_Father: {fileID: 1740309751}
+--- !u!1 &551397006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100016, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 551397007}
+  - 212: {fileID: 551397008}
+  m_Layer: 0
+  m_Name: zombie ding stuk_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &551397007
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400016, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 551397006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.63040161, y: 11.5190887, z: 0}
+  m_LocalScale: {x: 4, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 929832293}
+--- !u!212 &551397008
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200008, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 551397006}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: -3
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300004, guid: 743b51f8e24c3eb44837b15574fed26a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &648522513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100018, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 648522514}
+  m_Layer: 0
+  m_Name: left shin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &648522514
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400018, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 648522513}
+  m_LocalRotation: {x: 0, y: 0, z: .02617695, w: .999657333}
+  m_LocalPosition: {x: 1.78503418, y: .357681274, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1770242541}
+  m_Father: {fileID: 1740309751}
+--- !u!1 &929832292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100020, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 929832293}
+  m_Layer: 0
+  m_Name: right thigh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &929832293
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400020, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 929832292}
+  m_LocalRotation: {x: 0, y: 0, z: .000845686707, w: .999999642}
+  m_LocalPosition: {x: -.722808838, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 551397007}
+  m_Father: {fileID: 1740309751}
+--- !u!1 &947048992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100022, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 947048993}
+  m_Layer: 0
+  m_Name: right shin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &947048993
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400022, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 947048992}
+  m_LocalRotation: {x: 0, y: 0, z: .00322042196, w: .999994814}
+  m_LocalPosition: {x: -1.51132202, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1366610453}
+  m_Father: {fileID: 1740309751}
+--- !u!1 &976475872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100024, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 976475873}
+  - 212: {fileID: 976475874}
+  m_Layer: 0
+  m_Name: zombie ding stuk_11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &976475873
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400024, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 976475872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.91833496, y: 13.0409851, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1741104229}
+--- !u!212 &976475874
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200010, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 976475872}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: -5
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300022, guid: 743b51f8e24c3eb44837b15574fed26a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1000645083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100026, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1000645084}
+  - 212: {fileID: 1000645085}
+  m_Layer: 0
+  m_Name: zombie ding stuk_10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1000645084
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400026, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1000645083}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.21536255, y: 13.024353, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1437939622}
+--- !u!212 &1000645085
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200012, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1000645083}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: -5
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300020, guid: 743b51f8e24c3eb44837b15574fed26a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &1059687858
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400048, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -360.914154
+      objectReference: {fileID: 0}
+    - target: {fileID: 400048, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -253.071014
+      objectReference: {fileID: 0}
+    - target: {fileID: 400048, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.0411449894
+      objectReference: {fileID: 0}
+    - target: {fileID: 400048, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400048, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400048, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400048, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100048, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+      propertyPath: m_Name
+      value: zombie
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_RootGameObject: {fileID: 1740309750}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1 &1082619737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100028, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1082619738}
+  m_Layer: 0
+  m_Name: left lower arm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1082619738
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400028, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1082619737}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: .599374235, z: 1}
+  m_Children:
+  - {fileID: 2004319117}
+  m_Father: {fileID: 1740309751}
+--- !u!1 &1104384192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100030, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1104384194}
+  - 212: {fileID: 1104384193}
+  m_Layer: 0
+  m_Name: zombie ding stuk_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1104384193
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200014, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1104384192}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: -2
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300000, guid: 743b51f8e24c3eb44837b15574fed26a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &1104384194
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400030, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1104384192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .220428467, y: 6.53952026, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 75991306}
+--- !u!1 &1113540958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1113540959}
+  - 212: {fileID: 1113540960}
+  m_Layer: 0
+  m_Name: hooft zombie_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1113540959
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1113540958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .118835449, y: .118835449, z: 0}
+  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1621999591}
+--- !u!212 &1113540960
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200000, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1113540958}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300000, guid: cb80990e7056cc04993455ba08b766c3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1232929871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100032, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1232929872}
+  m_Layer: 0
+  m_Name: left thigh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1232929872
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400032, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1232929871}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .549377441, y: 1.52587891e-05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1568712022}
+  m_Father: {fileID: 1740309751}
+--- !u!1 &1329601432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100034, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1329601433}
+  - 212: {fileID: 1329601434}
+  m_Layer: 0
+  m_Name: zombie ding stuk_7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1329601433
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400034, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1329601432}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.19650269, y: -10.4813538, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 539483964}
+--- !u!212 &1329601434
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200016, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1329601432}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300014, guid: 743b51f8e24c3eb44837b15574fed26a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1366610452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100036, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1366610453}
+  - 212: {fileID: 1366610454}
+  m_Layer: 0
+  m_Name: zombie ding stuk_5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1366610453
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400036, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1366610452}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.2197876, y: 10.9683075, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 947048993}
+--- !u!212 &1366610454
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200018, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1366610452}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: -4
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300010, guid: 743b51f8e24c3eb44837b15574fed26a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1437939621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100038, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1437939622}
+  m_Layer: 0
+  m_Name: left foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1437939622
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400038, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1437939621}
+  m_LocalRotation: {x: 0, y: 0, z: .02617695, w: .999657333}
+  m_LocalPosition: {x: 1.78503418, y: .357681274, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1000645084}
+  m_Father: {fileID: 1740309751}
+--- !u!1 &1470537688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100040, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1470537689}
+  - 212: {fileID: 1470537690}
+  m_Layer: 0
+  m_Name: zombie ding stuk_13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1470537689
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400040, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1470537688}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.21307373, y: -2.66235352, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 365824831}
+--- !u!212 &1470537690
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200020, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1470537688}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300026, guid: 743b51f8e24c3eb44837b15574fed26a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1523820671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100042, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1523820672}
+  m_Layer: 0
+  m_Name: left upper arm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1523820672
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400042, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1523820671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: .599374235, z: 1}
+  m_Children:
+  - {fileID: 123892069}
+  m_Father: {fileID: 1740309751}
+--- !u!1 &1568712021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100044, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1568712022}
+  - 212: {fileID: 1568712023}
+  m_Layer: 0
+  m_Name: zombie ding stuk_12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1568712022
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400044, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1568712021}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.02508545, y: 11.5530701, z: 0}
+  m_LocalScale: {x: 4, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1232929872}
+--- !u!212 &1568712023
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200022, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1568712021}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: -3
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300024, guid: 743b51f8e24c3eb44837b15574fed26a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1621999590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100046, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1621999591}
+  m_Layer: 0
+  m_Name: head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1621999591
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400046, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1621999590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .204996392, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1113540959}
+  m_Father: {fileID: 1740309751}
+--- !u!1 &1740309750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100048, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1740309751}
+  - 95: {fileID: 1740309752}
+  m_Layer: 0
+  m_Name: zombie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1740309751
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400048, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1740309750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -360.914154, y: -253.071014, z: -.0411449894}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 75991306}
+  - {fileID: 1621999591}
+  - {fileID: 1437939622}
+  - {fileID: 539483964}
+  - {fileID: 1082619738}
+  - {fileID: 648522514}
+  - {fileID: 1232929872}
+  - {fileID: 1523820672}
+  - {fileID: 1741104229}
+  - {fileID: 246076854}
+  - {fileID: 2015188083}
+  - {fileID: 947048993}
+  - {fileID: 929832293}
+  - {fileID: 365824831}
+  m_Father: {fileID: 0}
+--- !u!95 &1740309752
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1740309750}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fab3f55d57c8b1247ab7db96c7aabe22, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
+--- !u!1 &1741104228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100050, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1741104229}
+  m_Layer: 0
+  m_Name: right foot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1741104229
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400050, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1741104228}
+  m_LocalRotation: {x: 0, y: 0, z: .00260669901, w: .999996603}
+  m_LocalPosition: {x: -1.51132202, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 976475873}
+  m_Father: {fileID: 1740309751}
+--- !u!1 &1770242540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100052, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1770242541}
+  - 212: {fileID: 1770242542}
+  m_Layer: 0
+  m_Name: zombie ding stuk_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1770242541
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400052, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1770242540}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.46832275, y: 10.9824829, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 648522514}
+--- !u!212 &1770242542
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200024, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 1770242540}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: -4
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300002, guid: 743b51f8e24c3eb44837b15574fed26a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &2004319116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100054, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2004319117}
+  - 212: {fileID: 2004319118}
+  m_Layer: 0
+  m_Name: zombie ding stuk_6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2004319117
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400054, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 2004319116}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.25283813, y: -7.10952759, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1082619738}
+--- !u!212 &2004319118
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200026, guid: 18d307cb255e493478698e1daeb3ab0e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 2004319116}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300012, guid: 743b51f8e24c3eb44837b15574fed26a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &2015188082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100056, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2015188083}
+  m_Layer: 0
+  m_Name: right lower arm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2015188083
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400056, guid: 18d307cb255e493478698e1daeb3ab0e, type: 2}
+  m_PrefabInternal: {fileID: 1059687858}
+  m_GameObject: {fileID: 2015188082}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: .599374235, z: 1}
+  m_Children:
+  - {fileID: 64739057}
+  m_Father: {fileID: 1740309751}

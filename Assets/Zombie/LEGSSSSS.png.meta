@@ -1,0 +1,99 @@
+fileFormatVersion: 2
+guid: 5fd2a5e5b094d354a88268e3cb69c96a
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: LEGSSSSS_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1522
+        width: 516
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: LEGSSSSS_1
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 1522
+        width: 802
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: LEGSSSSS_2
+      rect:
+        serializedVersion: 2
+        x: 2230
+        y: 1459
+        width: 1020
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: LEGSSSSS_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1023
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: LEGSSSSS_4
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 53
+        width: 800
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: LEGSSSSS_5
+      rect:
+        serializedVersion: 2
+        x: 2734
+        y: 62
+        width: 511
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 

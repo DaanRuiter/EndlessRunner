@@ -6,11 +6,13 @@ public class ExplosionMovement : MonoBehaviour {
 	public float shake = 0f;
 	public float shakeAmount = 0.7f;
 	public float decreaseFactor = 1.0f;
+	public AudioClip sound;
 	private Vector3 originalPos;
 	// Use this for initialization
 	void Start () {
 		camTransform = GameObject.FindGameObjectWithTag ("MainCamera");
 		originalPos = camTransform.transform.localPosition;
+		audio.PlayOneShot(sound);
 	}
 	void Update () {
 		if (shake > 0)
