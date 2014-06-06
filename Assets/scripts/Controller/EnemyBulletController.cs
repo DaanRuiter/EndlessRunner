@@ -8,7 +8,7 @@ public class EnemyBulletController : BulletController
 	void Start () 
 	{
 		speed = 5.5f;
-		dmg = 4f + (1 * GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats>().GetLevel());
+		dmg = 2f;
 	}
 	protected override void OnTriggerEnter2D(Collider2D other) {
 		if(other.transform.tag == "Player"){

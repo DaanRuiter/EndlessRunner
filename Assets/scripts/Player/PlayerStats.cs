@@ -22,6 +22,7 @@ public class PlayerStats : MonoBehaviour {
 	private Vector3 HPPos;
 	void Start () {
 		health = 100;
+		maxHealth = 100;
 		gold = 0;
 		exp = 0;
 		level = 1;
@@ -38,6 +39,7 @@ public class PlayerStats : MonoBehaviour {
 	}
 	public void Reset () {
 		health = 100;
+		maxHealth = 100;
 		gold = 0;
 		exp = 0;
 		level = 1;
@@ -91,6 +93,7 @@ public class PlayerStats : MonoBehaviour {
 			exp = 0;
 			statPoints += 1;
 			health = maxHealth;
+			healthBar.GetComponent<Healthbar>().Init(10f, 0.95f, false, HPPos.x, HPPos.y);
 			Quaternion rot = new Quaternion();
 			GameObject levelup = Instantiate(levelAnim,this.transform.position,rot) as GameObject;
 			levelup.transform.parent = this.transform;

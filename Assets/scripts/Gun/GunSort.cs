@@ -15,6 +15,7 @@ public class GunSort : MonoBehaviour {
 	public bool granadeLauncher = true;
 	public bool fireTrail	  = true;
 	public bool piercing	  = false;
+	public Texture[] weaponText;
 
 	void Start () 
 	{
@@ -33,7 +34,14 @@ public class GunSort : MonoBehaviour {
 	}
 	void SetTexture () 
 	{
-		//blalblal
+		GameObject weapon = GameObject.Find ("weapon");
+		if (weaponSort == "Rapid") {
+			DC.setTexture (weapon, weaponText[1]);
+		} else if (weaponSort == "Shotgun") {
+			DC.setTexture (weapon, weaponText[2]);
+		} else {
+			DC.setTexture (weapon, weaponText[3]);
+		}
 	}
 	public void CritSpecial()
 	{
@@ -55,5 +63,7 @@ public class GunSort : MonoBehaviour {
 		fireTrail 		= false;
 		granadeLauncher = false;
 		laserSight 		= false;
+		GameObject weapon = GameObject.Find ("weapon");
+		DC.setTexture (weapon, weaponText [0]);
 	}
 }

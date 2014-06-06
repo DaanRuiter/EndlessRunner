@@ -8,6 +8,7 @@ public class Ability01But : MonoBehaviour {
 		{
 			PlayerStats.statPoints -= 1;
 			GameObject.FindGameObjectWithTag("AbilityController").GetComponent<AbilityController>().UnlockAbility(0);
+			DC.setTexture(this.gameObject, DC.soldTexture);
 		}
 	}
 }

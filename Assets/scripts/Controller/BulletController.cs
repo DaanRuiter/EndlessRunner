@@ -32,6 +32,14 @@ public class BulletController : MonoBehaviour {
 		if(DC.isOutOfBoundsUp(this.gameObject)){
 			Destroy(this.gameObject, 0.1f);
 		}
+		if(this.transform.position.x >= 10)
+		{
+			Destroy(this.gameObject);
+		}
+		if(this.transform.position.x <= -10)
+		{
+			Destroy(this.gameObject);
+		}
 	}
 	protected virtual void OnTriggerEnter2D(Collider2D other)
 	{

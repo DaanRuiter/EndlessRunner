@@ -11,6 +11,9 @@ public class DC : MonoBehaviour {
 	public Texture[] theos;
 	public bool clearOnStart;
 
+	public static Texture soldTexture;
+	public Texture soldTex;
+
 	public static bool theotime;
 	public static bool paused;
 	public static float LEVEL_X_MIN = -10;
@@ -28,6 +31,7 @@ public class DC : MonoBehaviour {
 	void Awake(){
 		//transfer textures from instpector to reference
 		roadTextures = _roadTextures;
+		soldTexture = soldTex;
 
 		//transfer Gameobjects from instpector to reference
 		enemies = _enemies;

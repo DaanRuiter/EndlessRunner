@@ -29,7 +29,7 @@ public class MainMenu : MonoBehaviour {
 		creditsFinalX = Screen.width - 650;
 
 		optionsY = Screen.height;
-		optionsFinalY = Screen.height - 700;
+		optionsFinalY = Screen.height - 550;
 
 		optionsStartY = optionsY;
 		creditsStartX = creditsX;
@@ -42,7 +42,7 @@ public class MainMenu : MonoBehaviour {
 		GUI.DrawTexture(new Rect(0,0, Screen.width, Screen.height), sceneBG);
 		GUI.DrawTexture(new Rect(0, Screen.height / 4, 300, 450), menuBG);
 		GUI.DrawTexture(new Rect(creditsX, Screen.height - 800, 550, 800), credits);
-		GUI.DrawTexture(new Rect(400, optionsY, 550, 700), optionsBG);
+		GUI.DrawTexture(new Rect(400, optionsY, 550, 500), optionsBG);
 		GUI.Button(new Rect(Screen.width / 6, 100, 400, 200), "BIOHAZARD", GUIStats);
 
 		if(GUI.Button(new Rect(20, Screen.height / 4 + 60, 200, 60), "", startbutton)){

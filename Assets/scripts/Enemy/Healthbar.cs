@@ -38,7 +38,10 @@ public class Healthbar : MonoBehaviour {
 		}else{
 			SetCustomPos(_x, _y);
 		}
-		healthText = Instantiate(healthPrefab, HPPos, transform.rotation) as TextMesh;
+		if(healthText == null)
+		{
+			healthText = Instantiate(healthPrefab, HPPos, transform.rotation) as TextMesh;
+		}
 	}
 
 	private void SetCustomPos(float _x, float _y){

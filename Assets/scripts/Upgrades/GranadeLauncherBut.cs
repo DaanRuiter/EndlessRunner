@@ -6,7 +6,7 @@ public class GranadeLauncherBut : MonoBehaviour {
 		if(PlayerStats.statPoints >= 1)
 		{
 			PlayerStats.statPoints -= 1;
-			GameObject.FindGameObjectWithTag("Gun").GetComponent<GunSort>().laserSight = true;
+			GameObject.FindGameObjectWithTag("Gun").GetComponent<GunSort>().granadeLauncher = true;
 		}
 	}
 }

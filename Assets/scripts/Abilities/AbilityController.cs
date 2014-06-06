@@ -5,10 +5,10 @@ public class AbilityController : MonoBehaviour {
 
 	//Menno
 
-	private bool cdAbility01 = false; 
-	private bool cdAbility02 = false;
+	public bool cdAbility01 = false; 
+	public bool cdAbility02 = false;
 	private float coolDown = 5f;
-	private bool[] unlocked = new bool[2];
+	public bool[] unlocked = new bool[2];
 	void Start () {
 		unlocked [0] = false;
 		unlocked [1] = false;
