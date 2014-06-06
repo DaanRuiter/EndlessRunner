@@ -12,7 +12,7 @@ public class ChasingEnemy : EnemyController {
 		base.Start ();
 		going = true;
 		target = GameObject.FindGameObjectWithTag("PlayerController").transform;
-		speed = 5.5f;
+		speed = 10f;
 		dmg = 8f + (2 * GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats>().GetLevel());
 	}
 

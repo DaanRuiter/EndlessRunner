@@ -12,6 +12,8 @@ public class PlayerStats : MonoBehaviour {
 	public float exp;
 	public static int statPoints;
 
+	public float maxHealth;
+
 	private float expTillLevel;
 	private GameObject healthBar;	
 	private Vector3 HPPos;
@@ -52,7 +54,7 @@ public class PlayerStats : MonoBehaviour {
 	void Death()
 	{
 		GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameController> ().ResetStage ();
-		health = 100;
+		Application.LoadLevel (0);
 	}
 
 	public void AddGold(float _gold)
@@ -85,6 +87,7 @@ public class PlayerStats : MonoBehaviour {
 			level += 1;
 			exp = 0;
 			statPoints += 1;
+			health = maxHealth;
 			Quaternion rot = new Quaternion();
 			GameObject levelup = Instantiate(levelAnim,this.transform.position,rot) as GameObject;
 			levelup.transform.parent = this.transform;

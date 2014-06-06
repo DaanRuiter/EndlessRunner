@@ -8,10 +8,26 @@ public class GameController : MonoBehaviour{
 
 	private void Start(){
 		GameObject.FindGameObjectWithTag ("BlackScreen").GetComponent<FadeScreen> ().StartFade ();
+		for(int i = enemies.Count-1;i > 0; i--)
+		{
+			enemies.RemoveAt(i);
+		}
+		for(int i = props.Count-1;i > 0; i--)
+		{
+			props.RemoveAt(i);
+		}
 	}
 
 	public void ResetStage()
 	{
+		for(int i = enemies.Count-1;i > 0; i--)
+		{
+			enemies.RemoveAt(i);
+		}
+		for(int i = props.Count-1;i > 0; i--)
+		{
+			props.RemoveAt(i);
+		}
 		GameObject.FindGameObjectWithTag ("BlackScreen").GetComponent<FadeScreen> ().StartFade ();
 		GameObject.FindGameObjectWithTag ("PlayerController").GetComponent<PlayerController>().ResetPos ();
 		GameObject.FindGameObjectWithTag ("Gun").GetComponent<GunSort>().ResetGun();

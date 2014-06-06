@@ -2332,6 +2332,7 @@ MonoBehaviour:
   gold: 9999999
   health: 0
   exp: 0
+  maxHealth: 0
 --- !u!82 &1329289467
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3699,7 +3700,7 @@ GameObject:
   - 4: {fileID: 2016025431}
   - 114: {fileID: 2016025432}
   m_Layer: 0
-  m_Name: PropSpwawner
+  m_Name: PropSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

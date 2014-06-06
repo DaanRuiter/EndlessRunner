@@ -6,7 +6,7 @@ public class HealthUpgradeBut : MonoBehaviour {
 		if(PlayerStats.statPoints >= 1)
 		{
 			PlayerStats.statPoints -= 1;
-			GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats>().health += 10;
+			GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStats>().maxHealth += 10;
 		}
 	}
 }
