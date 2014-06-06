@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class ShootGun : MonoBehaviour {
+
+	//Menno
+
 	public Transform spawnPoint;
 	public GameObject bullet;
 	public GameObject granade;

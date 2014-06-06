@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class GunSort : MonoBehaviour {
+
+	//Menno
+
 	public string weaponSort = "";
 	public int speed		  = 0;
 	public int dmg			  = 0;

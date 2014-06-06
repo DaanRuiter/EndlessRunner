@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class EnemySpawner : MonoBehaviour {
+
+	//Daan
+
 	private bool enemySpawnable;
 	private float spawnTimer;
 	private Vector2 spawnPoint;

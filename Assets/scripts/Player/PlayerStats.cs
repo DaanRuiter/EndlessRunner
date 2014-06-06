@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class PlayerStats : MonoBehaviour {
+
+	//Menno / Daan
+
 	public static int level;
 
 	public GameObject prefab_healthBar;

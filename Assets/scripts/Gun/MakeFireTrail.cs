@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class MakeFireTrail : MonoBehaviour {
+
+	//Menno
+
 	public GameObject fire;
 	private bool coolDown;
 	void Update()

@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class WalkerEnemy : EnemyController {
+
+	//Menno
+
 	private int direction = 1;
 	override protected void Update () {
 		base.Update ();

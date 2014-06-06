@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class AimScript : MonoBehaviour {
+
+	//Menno
+
 	void Start()
 	{
 		LineRenderer line = this.GetComponent<LineRenderer>();

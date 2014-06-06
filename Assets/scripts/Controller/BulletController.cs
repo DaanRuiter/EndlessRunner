@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class BulletController : MonoBehaviour {
+
+	//Menno
+
 	public float destroyTime;
 	protected float speed;
 	protected float dmg;

@@ -2,8 +2,9 @@
 using System.Collections;
 
 public class DC : MonoBehaviour {
-	//custom datacenter
 
+	//Daan
+	
 	public GameObject[] _enemies;
 	public GameObject[] _props;
 	public Texture[] _roadTextures;

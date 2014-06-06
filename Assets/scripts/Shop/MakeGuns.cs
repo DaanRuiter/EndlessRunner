@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class MakeGuns : MonoBehaviour {
+
+	//Menno
+
 	public ArrayList GetGun()
 	{
 		int random 			  = Random.Range (1, 4);

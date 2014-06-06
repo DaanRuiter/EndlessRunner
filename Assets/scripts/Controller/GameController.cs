@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameController : MonoBehaviour{
 
+	//Menno
+
 	public static ArrayList enemies = new ArrayList();
-	public static ArrayList props = new ArrayList();
+	public static List<GameObject> props = new List<GameObject>();
 
 	private void Start(){
 		GameObject.FindGameObjectWithTag ("BlackScreen").GetComponent<FadeScreen> ().StartFade ();

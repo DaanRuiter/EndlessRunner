@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class Healthbar : MonoBehaviour {
+
+	//Daan
+
 	public TextMesh healthPrefab;
 
 	private float maxWidth = 2.6f;

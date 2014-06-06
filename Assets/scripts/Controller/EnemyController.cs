@@ -3,6 +3,8 @@ using System.Collections;
 
 public class EnemyController : EnemyStats {
 
+	//Daan
+
 	public GameObject bullet;
 	public Transform bulletSpawnPoint;
 	public GameObject HPBarPrefab;
@@ -40,14 +42,13 @@ public class EnemyController : EnemyStats {
 		shootCooldown -= 0.01f * (PlayerStats.level-1);
 		healthBar.GetComponent<Healthbar>().Init(2.6f, 0.45f, true, this.transform.position.x, this.transform.position.y);
 		healthBar.GetComponent<Healthbar>().InitHealthText(this.health);
-		//DEBUG ONLY \/
-		healthBar.GetComponent<Healthbar>().addText("  -  " + this.type);
 	}
 	
 	protected virtual void Update () {
 		if(DC.paused != true){
 				player = GameObject.FindGameObjectWithTag("PlayerController").transform.position;
 				Vector3 dir = player - this.transform.position;
+				dir.z = this.transform.rotation.z;
 				float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 				transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 

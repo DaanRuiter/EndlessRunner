@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class PropSpawner : MonoBehaviour {
+
+	//Daan
+
 	private bool propSpawnable;
 	private float spawnTimer;
 	private Vector2 spawnPoint;

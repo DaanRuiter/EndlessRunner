@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class FadeScreen : MonoBehaviour {
+
+	//Menno
+
 	Color color = Color.black;
 	public void StartFade()
 	{

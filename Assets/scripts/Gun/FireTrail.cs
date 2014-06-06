@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class FireTrail : MonoBehaviour {
+
+	//Menno
+
 	private bool coolDown = false;
 	void Start()
 	{

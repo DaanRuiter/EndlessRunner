@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class WeaponSort : MonoBehaviour {
+
+	//Menno
+
 	private string weaponSort;
 	private float price;
 	private int speed;

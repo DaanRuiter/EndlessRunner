@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Stats : MonoBehaviour {
 
+	//Daan
+
 	private GameObject player;
 
 	void Start(){
