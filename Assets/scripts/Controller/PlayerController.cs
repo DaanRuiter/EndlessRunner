@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour {
 			moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection *= movementSpeed;
 			controller.Move(moveDirection * Time.deltaTime);
+			this.audio.volume = 0.3f;
+		}
+		else{
+			this.audio.volume = 0;
 		}
 	}
 	public void ResetPos()

@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: 4b25188fd12629440a6eb8ec1183eeee
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: guyyy_upper left
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1097
+        width: 623
+        height: 1247
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: guyyy_foot l
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 1969
+        width: 265
+        height: 398
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: guyyy_head
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 1829
+        width: 814
+        height: 832
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: guyyy_foot r
+      rect:
+        serializedVersion: 2
+        x: 2328
+        y: 1824
+        width: 265
+        height: 398
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: guyyy_upper right
+      rect:
+        serializedVersion: 2
+        x: 3029
+        y: 1916
+        width: 447
+        height: 709
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: guyyy_body
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 703
+        width: 1508
+        height: 728
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: guyyy_lower right
+      rect:
+        serializedVersion: 2
+        x: 2881
+        y: 1124
+        width: 458
+        height: 447
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: guyyy_gun
+      rect:
+        serializedVersion: 2
+        x: 3695
+        y: 82
+        width: 184
+        height: 1880
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: guyyy_lower left
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 89
+        width: 674
+        height: 572
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: guyyy_hand r
+      rect:
+        serializedVersion: 2
+        x: 2771
+        y: 472
+        width: 288
+        height: 243
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: guyyy_hand l
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 0
+        width: 292
+        height: 351
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: guyyy_fingers
+      rect:
+        serializedVersion: 2
+        x: 2161
+        y: 9
+        width: 76
+        height: 156
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

@@ -28,6 +28,15 @@ public class RoadScroll : MonoBehaviour {
 					DC.setRandomTexture(road, DC.getTextureList(DC.roadTextures));
 				}
 			}
+			foreach(GameObject prop in GameController.props){
+				Vector2 pos = prop.transform.position;
+				pos.y -= scrollSpeed;
+				prop.transform.position = pos;
+				if(DC.isOutOfBounds(prop.gameObject)){
+					GameController.props.Remove(prop);
+					Destroy(prop, 1f);
+				}
+			}
 		}
 	}
 }

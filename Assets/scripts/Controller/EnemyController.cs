@@ -6,11 +6,12 @@ public class EnemyController : EnemyStats {
 	public GameObject bullet;
 	public Transform bulletSpawnPoint;
 	public GameObject HPBarPrefab;
+	public AudioClip gunSound;
 
 	protected bool alive;
 	protected bool inRange;
 	protected Vector2 pos;
-	protected GameObject player;
+	protected Vector3 player;
 	protected GameObject healthBar;
 	protected Vector3 barPos;
 	
@@ -27,7 +28,7 @@ public class EnemyController : EnemyStats {
 		shootTimer = 0f;
 		alive = true;
 		pos = new Vector2(this.transform.position.x, this.transform.position.y);
-		player = GameObject.FindGameObjectWithTag("PlayerController");
+		player = GameObject.FindGameObjectWithTag("PlayerController").transform.position;
 
 		barPos.x = this.transform.position.x;
 		barPos.y = this.transform.position.y + 1f;
@@ -45,11 +46,10 @@ public class EnemyController : EnemyStats {
 	
 	protected virtual void Update () {
 		if(DC.paused != true){
-			if(this.type != "chasing"){
-				Vector3 dir = player.transform.position - this.transform.position;
+				player = GameObject.FindGameObjectWithTag("PlayerController").transform.position;
+				Vector3 dir = player - this.transform.position;
 				float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 				transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-			}
 
 			barPos.x = this.transform.position.x - healthBar.GetComponent<Healthbar>().GetXOffset();
 			barPos.y = this.transform.position.y + 1f;
@@ -69,6 +69,8 @@ public class EnemyController : EnemyStats {
 	private void Shoot(){
 		Instantiate(bullet, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
 		shootTimer = Random.Range(10, 14);
+		audio.PlayOneShot(gunSound);
+		audio.pitch = Random.Range (1f, 1.5f);
 	}
 	
 	public void LoseHealth(float _dmg, bool _crit){

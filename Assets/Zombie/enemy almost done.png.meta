@@ -1,0 +1,99 @@
+fileFormatVersion: 2
+guid: 170eac7629a0fd449a7e7e974d318cad
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: enemy almost done body
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 170
+        width: 306
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: enemy almost head
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 296
+        width: 181
+        height: 189
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: 'enemy almost done upper arm '
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 19
+        width: 121
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: enemy almost done lower arm
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 25
+        width: 170
+        height: 127
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: enemy almost done upper arm R
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 120
+        width: 102
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: enemy almost done lower arm R
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 0
+        width: 95
+        height: 90
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

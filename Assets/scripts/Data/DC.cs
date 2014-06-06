@@ -4,7 +4,6 @@ using System.Collections;
 public class DC : MonoBehaviour {
 	//custom datacenter
 
-
 	public GameObject[] _enemies;
 	public GameObject[] _props;
 	public Texture[] _roadTextures;
@@ -81,7 +80,7 @@ public class DC : MonoBehaviour {
 	}
 
 	public static bool isOutOfBounds(GameObject obj){
-		return obj.transform.position.y < Camera.main.camera.transform.position.y - Camera.main.camera.orthographicSize;
+		return obj.transform.position.y < Camera.main.camera.transform.position.y - Camera.main.camera.orthographicSize - 5;
 	}
 
 	public static bool isOutOfBoundsUp(GameObject obj){

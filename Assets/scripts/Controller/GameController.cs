@@ -4,6 +4,7 @@ using System.Collections;
 public class GameController : MonoBehaviour{
 
 	public static ArrayList enemies = new ArrayList();
+	public static ArrayList props = new ArrayList();
 
 	private void Start(){
 		GameObject.FindGameObjectWithTag ("BlackScreen").GetComponent<FadeScreen> ().StartFade ();
@@ -31,6 +32,9 @@ public class GameController : MonoBehaviour{
 		}
 		foreach(Object text in enemyHealths){
 			Destroy(text);
+		}
+		foreach(Object prop in props){
+			Destroy(prop);
 		}
 	}
 }

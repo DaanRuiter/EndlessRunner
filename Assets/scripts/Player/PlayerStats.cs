@@ -20,21 +20,15 @@ public class PlayerStats : MonoBehaviour {
 		exp = 0;
 		level = 1;
 		expTillLevel = 500;
-		HPPos.x = this.transform.position.x - 1f;
-		HPPos.y = this.transform.position.y + 1f;
+		HPPos.x = Camera.main.transform.position.x;
+		HPPos.y = Camera.main.transform.position.y - Camera.main.orthographicSize + 1;
 		HPPos.z = -1.1f;
 
 		healthBar = GameObject.Instantiate(prefab_healthBar, HPPos, Quaternion.identity) as GameObject;
-		healthBar.GetComponent<Healthbar>().Init(6f, 0.75f, true, HPPos.x, HPPos.y);
+		healthBar.GetComponent<Healthbar>().Init(10f, 0.95f, false, HPPos.x, HPPos.y);
 		healthBar.GetComponent<Healthbar>().InitHealthText(this.health);
 		healthBar.tag = "PlayerHealthBar";
 		healthBar.GetComponent<Healthbar>().SetTextTag("PlayerHealthText");
-	}
-
-	void Update(){
-		HPPos.x = this.transform.position.x - 0f;
-		HPPos.y = this.transform.position.y + -1f;
-		healthBar.transform.position = HPPos;
 	}
 
 	public void LoseHealth(float _dmg)
